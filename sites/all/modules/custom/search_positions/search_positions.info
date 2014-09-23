@@ -1,7 +1,6 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: lmparra
- * Date: 9/19/14
- * Time: 9:30 AM
- */ 
+name = Globant Search Positions
+description = Create a block that allow to search into available positions in Globant
+package = Globant
+version = 7.x-1.0
+
+core = 7.x

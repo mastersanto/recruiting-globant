@@ -1,3 +1,5 @@
-/**
- * Created by lmparra on 9/19/14.
- */
+var search = angular.module('search', []);
+
+jQuery(document).ready(function($) {
+    angular.bootstrap($('#search-positions'), ['search']);
+});
