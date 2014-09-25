@@ -1,0 +1,6 @@
+name = Globant Search Positions
+description = Create a block that allow to search into available positions in Globant
+package = Globant
+version = 7.x-1.0
+
+core = 7.x

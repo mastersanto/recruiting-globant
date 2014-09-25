@@ -1,0 +1,50 @@
+<?php
+
+/*
+ * Implements hook_block_info()
+ */
+function search_positions_block_info() {
+
+    $blocks['search_positions'] = array(
+        'info' => t('Search Positions'),
+    );
+
+    return $blocks;
+}
+
+/*
+ * Implements hook_block_view()
+ */
+function search_positions_block_view($delta = '') {
+    $block = array();
+
+    switch($delta) {
+        case 'search_positions':
+
+            drupal_add_library('angularjs', 'angularjs');
+
+            $module_path = drupal_get_path('module', 'search_positions');
+            drupal_add_js($module_path . '/js/search/app.js');
+
+            $block['content'] = array(
+                '#theme' => 'search_positions_block'
+            );
+
+            break;
+    }
+
+    return $block;
+}
+
+/*
+ * Implements hook_theme()
+ */
+function search_positions_theme($existing, $type, $theme, $path) {
+    return array(
+        'search_positions_block' => array(
+            'variables' => array(),
+            'template'  => 'templates/search-positions-block'
+        )
+    );
+}
+
