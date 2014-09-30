@@ -481,3 +481,14 @@ function _bootstrap_settings_form(&$form, $form_state) {
   );
 
 }
+
+
+function path_to_theme() {
+  global $theme_path;
+
+  if (!isset($theme_path)) {
+    drupal_theme_initialize();
+  }
+
+  return $theme_path;
+}

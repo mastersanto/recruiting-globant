@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
 // Bootstrap library.
 @import 'bootstrap.less';
 
@@ -8,3 +10,89 @@
 @import 'header.less';
 @import 'content.less';
 @import 'footer.less';
+
+// Header
+//---------------------------------------------
+#navbar.navbar-default {
+	background-color: transparent;
+	background-image: none;
+	border-color: transparent;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1;
+
+	.navbar-collapse {
+		float: right;
+	}
+
+	.navbar-nav > li > a {
+		color: white;
+	}
+}
+
+// Sections
+//---------------------------------------------
+.glb-section {
+	height:700px;
+
+	h2,
+	p.subtitle {
+		text-align: center;
+		text-transform:uppercase;
+	}
+
+	// Hero
+	//-------------------------
+	&.hero {
+		background-size: cover;
+		background-position: center center;
+	}
+
+	// Location
+	//-------------------------
+	&.location {
+		background-image: url('../assets/bkg_location.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+
+		// Collapsible
+		//-------------------------
+		.panel-title {
+			text-align: right;
+
+			> a {
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	// Studios
+	//-------------------------
+	&.studios {
+
+		.studio{
+			height: 150px;
+		}
+
+		.bkg-green {
+			background-color: @glb-green;
+		}
+		.bkg-orange {
+			background-color: @glb-orange;
+		}
+		.bkg-blue {
+			background-color: @glb-blue;
+		}
+		.bkg-violet {
+			background-color: @glb-violet;
+		}
+	}
+
+	// Contact
+	//-------------------------
+	&.contact {
+		font-color: white;
+	}
+}
