@@ -46,25 +46,39 @@
 	// Hero
 	//-------------------------
 	&.hero {
-		background-size: cover;
-		background-position: center center;
+		max-height: 498px;
+		position:  relative;
+		overflow: hidden;
+
+		.hero-image {
+			left: 0;
+			position:absolute;
+			top: 0;
+		}
 	}
 
 	// Location
 	//-------------------------
 	&.location {
-		background-image: url('../assets/bkg_location.png');
-		background-position: center center;
-		background-repeat: no-repeat;
 
 		// Collapsible
 		//-------------------------
-		.panel-title {
-			text-align: right;
+		.panel-heading {
+			padding: 0;
 
-			> a {
-				text-transform: uppercase;
-			}
+			.panel-title {
+				text-align: right;
+
+				> a {
+					display: block;
+					padding: 10px 15px;
+					text-transform: uppercase;
+
+					span {
+						display: block;
+					}
+				}
+			}			
 		}
 	}
 
@@ -94,5 +108,22 @@
 	//-------------------------
 	&.contact {
 		font-color: white;
+	}
+}
+
+
+// Bkg Images
+//---------------------------------------------
+.bkg-image-container {
+	position: relative;
+
+	.bkg-image {
+	}
+
+	.bkg-image-content {
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 }
