@@ -1,0 +1,7 @@
+name = Why Globant Accordion
+description = Create an accordion with nodes about 'why globant'
+package = Globant
+
+version = 7.x-1.0
+
+core = 7.x

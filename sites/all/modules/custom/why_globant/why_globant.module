@@ -1,0 +1,71 @@
+<?php
+
+/**
+ * Implements hook_block_info
+ */
+
+function why_globant_block_info() {
+
+    $blocks = array();
+
+    $blocks['why_globant'] = array(
+        'info' => t('Why Gloant'),
+    );
+
+    return $blocks;
+}
+
+/**
+ * Implements hook_block_view
+ */
+
+function why_globant_block_view($delta = '') {
+    $block = array();
+
+    switch($delta) {
+        case 'why_globant':
+
+            $content = array();
+            $image = '';
+            $nodes = why_globant_get_nodequeue_content('why_globant');
+
+            foreach ($nodes as $key => $node) {
+                if ($node->field_imagen[LANGUAGE_NONE][0]['uri']) {
+                    $image = theme('image', array(
+                        'path'  => $node->field_imagen[LANGUAGE_NONE][0]['uri'],
+                        'alt'   => $node->title,
+                        'class' =>  'hero-image'
+                    ));
+                }
+
+                $content['nodes'][$key] = array(
+                    'title'         =>  $node->title,
+                    'description'   =>  $node->body,
+                    'image'         =>  $image
+                );
+            }
+
+            $block['content'] = theme('why_globant_block', $content);
+            break;
+    }
+
+    return $block;
+}
+
+function why_globant_theme() {
+    return array(
+        'why_globant_block' => array(
+            'variables' => array(),
+            'template'  => 'templates/why-globant-block'
+        )
+    );
+}
+
+function why_globant_get_nodequeue_content($nodequeue_name) {
+
+    $nodequeue = nodequeue_load_queue_by_name($nodequeue_name);
+    $nodes = nodequeue_load_nodes($nodequeue->qid);
+
+    return $nodes;
+}
+

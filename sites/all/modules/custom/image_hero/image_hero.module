@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * Implements hook_block_info
+ */
+
+function image_hero_block_info() {
+
+    $blocks = array();
+
+    $blocks['image_hero'] = array(
+        'info' => t('Image Hero Block'),
+    );
+
+    return $blocks;
+}
+
+/**
+ * Implements hook_block_view
+ */
+
+function image_hero_block_view($delta = '') {
+    $block = array();
+
+    switch($delta) {
+        case 'image_hero':
+
+            $nodes = image_hero_get_nodequeue_content('imagen_destacada');
+            $image = '';
+            $content = array();
+            $node = array_pop($nodes);
+
+            if ($node) {
+                $image = theme('image', array(
+                    'path'  => $node->field_imagen_destacada[LANGUAGE_NONE][0]['uri'],
+                    'alt'   => $node->title,
+                    'class' =>  'hero-image'
+                ));
+
+                $content = array(
+                    'title'         =>  $node->title,
+                    'description'   =>  $node->body,
+                    'image'         =>  $image
+                );
+            }
+
+            $block['content'] = theme('image_hero_block', $content);
+            break;
+    }
+
+    return $block;
+}
+
+function image_hero_theme() {
+    return array(
+        'image_hero_block' => array(
+            'variables' => array(),
+            'template'  => 'templates/image-hero-block'
+        )
+    );
+}
+
+function image_hero_get_nodequeue_content($nodequeue_name) {
+
+    $nodequeue = nodequeue_load_queue_by_name($nodequeue_name);
+    $nodes = nodequeue_load_nodes($nodequeue->qid);
+
+    return $nodes;
+}
+

@@ -1,0 +1,7 @@
+name = Image Hero Block
+description = Create an image hero block base on a nodequeue
+package = Globant
+
+version = 7.x-1.0
+
+core = 7.x
