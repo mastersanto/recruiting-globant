@@ -1,1 +1,3 @@
-<?php print $variables['image']; ?>
+<div class="hero-container">
+  <?php print $variables['image']; ?>
+</div>

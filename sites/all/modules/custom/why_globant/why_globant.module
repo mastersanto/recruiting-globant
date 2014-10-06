@@ -30,7 +30,7 @@ function why_globant_block_view($delta = '') {
             $nodes = why_globant_get_nodequeue_content('why_globant');
 
             foreach ($nodes as $key => $node) {
-                if ($node->field_imagen[LANGUAGE_NONE][0]['uri']) {
+                if ($node->field_imagen) {
                     $image = theme('image', array(
                         'path'  => $node->field_imagen[LANGUAGE_NONE][0]['uri'],
                         'alt'   => $node->title,

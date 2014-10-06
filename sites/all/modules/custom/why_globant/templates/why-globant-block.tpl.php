@@ -7,14 +7,14 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?= $key ?>">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?= $key + 1 ?>">
                 <span class="container">
                   <?= $node['title'] ?>
                 </span>
                     </a>
                 </h4>
             </div>
-            <div id="collapse<?= $key ?>" class="panel-collapse collapse in">
+            <div id="collapse<?= $key + 1 ?>" class="panel-collapse collapse in">
                 <div class="panel-body">
                     <div class="container bkg-image-container">
                         <?= $node['image'] ?>
