@@ -35,7 +35,9 @@
 // Sections
 //---------------------------------------------
 .glb-section {
-	height:700px;
+	background-color: white;
+	overflow: hidden;
+	position: relative;
 
 	h2,
 	p.subtitle {
@@ -46,14 +48,19 @@
 	// Hero
 	//-------------------------
 	&.hero {
-		max-height: 498px;
-		position:  relative;
-		overflow: hidden;
 
-		.hero-image {
-			left: 0;
-			position:absolute;
+		.hero-container {
+			bottom: 0;
+			left: -100%;
+			position:fixed;
+			right: 0;
+			text-align: center;
 			top: 0;
+			width: 300%;
+
+			.hero-image {
+				min-height: 100%;
+			}
 		}
 	}
 
@@ -63,22 +70,40 @@
 
 		// Collapsible
 		//-------------------------
-		.panel-heading {
-			padding: 0;
+		#accordion {
+			margin: 0;
 
-			.panel-title {
-				text-align: right;
+			.panel-heading {
+				padding: 0;
 
-				> a {
-					display: block;
-					padding: 10px 15px;
-					text-transform: uppercase;
+				.panel-title {
+					text-align: right;
 
-					span {
+					> a {
 						display: block;
+						padding: 10px 15px;
+						text-transform: uppercase;
+
+						span {
+							display: block;
+						}
 					}
-				}
-			}			
+				}			
+			}
+		}
+
+		.bkg-image-content {
+			.eyebrow {
+				font-size: 24px;
+				text-align: right;
+				text-transform: uppercase;
+			}
+
+			h3 {
+				border-bottom: 2px solid #000;
+				padding-bottom: 8px;
+				text-align: right;
+			}
 		}
 	}
 
@@ -88,6 +113,34 @@
 
 		.studio{
 			height: 150px;
+			position: relative;
+
+			.studio-content {
+				bottom: 0;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+
+				.studio-overlay {
+					background-color: rgba(255, 255, 255, 0.8);
+					color: black;
+					opacity: 0;
+					padding: 15px;
+					bottom: 0;
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					transition: opacity .25s ease-in-out;
+				}
+
+				&:hover {
+					.studio-overlay {
+						opacity: 1;
+					}
+				}
+			}
 		}
 
 		.bkg-green {
@@ -111,7 +164,6 @@
 	}
 }
 
-
 // Bkg Images
 //---------------------------------------------
 .bkg-image-container {
@@ -126,4 +178,13 @@
 		right: 0;
 		top: 0;
 	}
+}
+
+// Footer
+//---------------------------------------------
+.footer {
+	background-color: white;
+	margin: 0;
+	position: relative;
+	z-index: 1;
 }
