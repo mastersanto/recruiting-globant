@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * Implements hook_block_info()
+ */
+function globant_studios_block_info() {
+  $blocks = array();
+
+  $blocks['globant_studios'] => array(
+    'info' => t('Studios in Globant')
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view()
+ */
+function globant_studios_block_view($delta = '') {
+  $block = array();
+
+  switch($delta) {
+    case 'globant_studios':
+
+      $block ['content'] = '';
+
+      break;
+  }
+
+  return $block;
+}
+
+/**
+ * Implements hook_theme()
+ */
+function globant_studios_theme() {
+  return array(
+    'globant_studios_block' => array(
+      'variables' =>  array(),
+      'template'  =>  'templates/globant-studios-block'
+    )
+  );
+}

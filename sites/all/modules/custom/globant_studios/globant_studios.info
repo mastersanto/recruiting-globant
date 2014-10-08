@@ -1,0 +1,6 @@
+name = Globant Studios
+description = Create base structure for Globant Studios block that is in home
+
+version = 7.x-1.0
+
+core = 7.x

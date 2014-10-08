@@ -3,7 +3,6 @@
 /**
  * Implements hook_block_info
  */
-
 function why_globant_block_info() {
 
     $blocks = array();
@@ -18,7 +17,6 @@ function why_globant_block_info() {
 /**
  * Implements hook_block_view
  */
-
 function why_globant_block_view($delta = '') {
     $block = array();
 
@@ -52,6 +50,9 @@ function why_globant_block_view($delta = '') {
     return $block;
 }
 
+/**
+ * Implements hook_theme()
+ */
 function why_globant_theme() {
     return array(
         'why_globant_block' => array(
@@ -61,6 +62,11 @@ function why_globant_theme() {
     );
 }
 
+/**
+ * Return nodes from nodequeue by its machineame
+ * @param $nodequeue_name Nodequeue machine name
+ * @return array
+ */
 function why_globant_get_nodequeue_content($nodequeue_name) {
 
     $nodequeue = nodequeue_load_queue_by_name($nodequeue_name);

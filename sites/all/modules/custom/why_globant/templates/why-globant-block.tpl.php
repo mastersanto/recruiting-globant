@@ -14,7 +14,7 @@
                     </a>
                 </h4>
             </div>
-            <div id="collapse<?= $key + 1 ?>" class="panel-collapse collapse in">
+            <div id="collapse<?= $key + 1 ?>" class="panel-collapse collapse <?php if (($key + 1) == 1) print 'in'; ?>">
                 <div class="panel-body">
                     <div class="container bkg-image-container">
                         <?= $node['image'] ?>
