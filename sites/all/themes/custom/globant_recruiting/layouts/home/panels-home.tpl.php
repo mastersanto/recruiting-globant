@@ -270,7 +270,7 @@
 
     </section>
       
-    <section id="row3" class="glb-section hero contact" style="background-image: url('<?php print path_to_theme(); ?>/assets/bkg_contact.png');">
+    <section id="row4" class="glb-section hero contact" style="background-image: url('<?php print path_to_theme(); ?>/assets/bkg_contact.png');">
       <div class="container">
         <?php print $content['row3']; ?>
 
