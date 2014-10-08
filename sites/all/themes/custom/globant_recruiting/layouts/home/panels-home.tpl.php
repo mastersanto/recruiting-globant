@@ -28,20 +28,11 @@
     <section id="row2" class="glb-section location">
       <?php print $content['row2']; ?>
 
-      <h2>Por que Globant</h2>
-      <p class="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+      <!--h2 class="section-title">Por que Globant</h2>
+      <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p-->
 
       <div class="panel-group" id="accordion">
         <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                <span class="container">
-                  Tenemos un mismo horizonte como equipo
-                </span>
-              </a>
-            </h4>
-          </div>
           <div id="collapseOne" class="panel-collapse collapse in">
             <div class="panel-body">
               <div class="container bkg-image-container">
@@ -57,8 +48,32 @@
               </div>
             </div>
           </div>
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                <span class="container">
+                  Tenemos un mismo horizonte como equipo
+                </span>
+              </a>
+            </h4>
+          </div>
         </div>
         <div class="panel panel-default">
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="container bkg-image-container">
+                <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/bkg_location.png" />
+                <div class="bkg-image-content">
+                  <p class="eyebrow">Anim pariatur cliche reprehenderit</p>
+                  <div class="col-sm-6 col-md-5 col-md-offset-7 col-lg-6 col-lg-offset-0">
+                    <h3>Anim pariatur cliche</h3>
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
+                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="panel-heading">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
@@ -68,14 +83,16 @@
               </a>
             </h4>
           </div>
-          <div id="collapseTwo" class="panel-collapse collapse">
+        </div>
+        <div class="panel panel-default">
+          <div id="collapseThree" class="panel-collapse collapse">
             <div class="panel-body">
               <div class="container bkg-image-container">
                 <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/bkg_location.png" />
                 <div class="bkg-image-content">
-                  <p class="eyebrow">Contamos con 29 oficinas en 7 paises</p>
+                  <p class="eyebrow">Anim pariatur cliche reprehenderit</p>
                   <div class="col-sm-6 col-md-5 col-md-offset-7 col-lg-6 col-lg-offset-0">
-                    <h3>G-moves</h3>
+                    <h3>Anim pariatur cliche</h3>
                     <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
                     <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
                   </div>
@@ -83,8 +100,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
@@ -94,14 +109,16 @@
               </a>
             </h4>
           </div>
+        </div>
+        <div class="panel panel-default">
           <div id="collapseThree" class="panel-collapse collapse">
             <div class="panel-body">
               <div class="container bkg-image-container">
                 <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/bkg_location.png" />
                 <div class="bkg-image-content">
-                  <p class="eyebrow">Contamos con 29 oficinas en 7 paises</p>
+                  <p class="eyebrow">Anim pariatur cliche reprehenderit</p>
                   <div class="col-sm-6 col-md-5 col-md-offset-7 col-lg-6 col-lg-offset-0">
-                    <h3>G-moves</h3>
+                    <h3>Anim pariatur cliche</h3>
                     <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
                     <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
                   </div>
@@ -109,8 +126,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
@@ -120,21 +135,6 @@
               </a>
             </h4>
           </div>
-          <div id="collapseThree" class="panel-collapse collapse">
-            <div class="panel-body">
-              <div class="container bkg-image-container">
-                <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/bkg_location.png" />
-                <div class="bkg-image-content">
-                  <p class="eyebrow">Contamos con 29 oficinas en 7 paises</p>
-                  <div class="col-sm-6 col-md-5 col-md-offset-7 col-lg-6 col-lg-offset-0">
-                    <h3>G-moves</h3>
-                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
-                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -143,9 +143,8 @@
       <div class="container">
         <?php print $content['row3']; ?>
 
-        <h2>Experiencia Glober</h2>
-        <p class="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>
+        <h2 class="section-title">Experiencia Glober</h2>
+        <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
       </div>
 
       <div class="row">
@@ -275,8 +274,8 @@
       <div class="container">
         <?php print $content['row3']; ?>
 
-        <h2>Sumate a nuestro equipo</h2>
-        <p class="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+        <h2 class="section-title">Sumate a nuestro equipo</h2>
+        <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>
       </div>
     </section>

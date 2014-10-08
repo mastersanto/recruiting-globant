@@ -20,4 +20,7 @@ GLB.start = (function(window, document, $) {
 	$(window).on('resize', function(ev) {
 		GLB.sectionResize.init(ev, $);
 	});
+	$(window).on('ready', function(ev) {
+		GLB.sectionResize.init(ev, $);
+	});
 })(window, document, jQuery);
