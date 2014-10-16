@@ -21,29 +21,25 @@
         <img class="hero-image" src="<?php print path_to_theme(); ?>/assets/hero_image.png" />
       </div>
       <?php print $content['row1']; ?>
-      HERE GOES HERO<br>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
     </section>
 
     <section id="row2" class="glb-section location">
       <?php print $content['row2']; ?>
 
-      <!--h2 class="section-title">Por que Globant</h2>
-      <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p-->
-
       <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
+        <!--======== Offices Panel ========-->
+        <div class="panel panel-default offices-panel">
           <div id="collapseOne" class="panel-collapse collapse in">
-            <div class="panel-body">
-              <div class="container bkg-image-container">
-                <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/bkg_location.png" />
-                <div class="bkg-image-content">
-                  <p class="eyebrow">Contamos con 29 oficinas en 7 paises</p>
-                  <div class="col-sm-6 col-md-5 col-md-offset-7 col-lg-6 col-lg-offset-0">
-                    <h3>G-moves</h3>
-                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
-                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
-                  </div>
+            <div class="panel-body container">
+              <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/why/offices/bkg-offices.png" />
+              <p class="eyebrow">1 - Contamos con 29 oficinas en 7 paises</p>
+              <div class="panel-column-right">
+                <h3>G-moves</h3>
+                <p>Tenemos centros de desarrollo en 16 ciudades diferentes de América Latina.</p>
+                <p>llevamos las oportunidades a donde está el talento, por eso los Globers pueden elegir la oficina donde quieres trabajar, incluso entre alguna de las 4 oficinas de Buenos Aires (San Telmo, Congreso, Retiro y Nuñez).</p>
+                <div class="image-wrapper">
+                  <img class="image-display" src="<?php print path_to_theme(); ?>/assets/why/offices/office.png" />
+                  <p class="image-caption">LT Surge presentando su último estudio en South Park</p>
                 </div>
               </div>
             </div>
@@ -51,25 +47,33 @@
           <div class="panel-heading">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                <span class="container">
-                  Tenemos un mismo horizonte como equipo
-                </span>
+                <span class="container">1 - Contamos con 29 oficinas en 7 paises</span>
               </a>
             </h4>
           </div>
         </div>
-        <div class="panel panel-default">
+        <!--======== Career Panel ========-->
+        <div class="panel panel-default career-panel">
           <div id="collapseTwo" class="panel-collapse collapse">
-            <div class="panel-body">
-              <div class="container bkg-image-container">
-                <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/bkg_location.png" />
-                <div class="bkg-image-content">
-                  <p class="eyebrow">Anim pariatur cliche reprehenderit</p>
-                  <div class="col-sm-6 col-md-5 col-md-offset-7 col-lg-6 col-lg-offset-0">
-                    <h3>Anim pariatur cliche</h3>
-                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
-                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
-                  </div>
+            <div class="panel-body container">
+              <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/why/clients/bkg-clients.png" />
+              <p class="eyebrow">2 - Tenemos un mismo horizonte como equipo</p>
+              <div class="panel-column-right">
+                <h3>Career</h3>
+                <p>Creemos en la autonomía y en que tener un propósito en común hará que no solo creazcas como profesional sino que disfrutes el camino.</p>
+              </div>
+              <div class="row-3-images">
+                <div class="image-wrapper">
+                  <img class="image-display" src="<?php print path_to_theme(); ?>/assets/why/career/have-fun.png" />
+                  <p class="image-caption">Chillouts</p>
+                </div>
+                <div class="image-wrapper">
+                  <img class="image-display" src="<?php print path_to_theme(); ?>/assets/why/career/learning.png" />
+                  <p class="image-caption">Descuentos con G++</p>
+                </div>
+                <div class="image-wrapper">
+                  <img class="image-display" src="<?php print path_to_theme(); ?>/assets/why/career/planning.png" />
+                  <p class="image-caption">Concurso de bandas</p>
                 </div>
               </div>
             </div>
@@ -77,60 +81,101 @@
           <div class="panel-heading">
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                <span class="container">
-                  Trabajamos con las empresas más innovadoras
-                </span>
+                <span class="container">2 - Tenemos un mismo horizonte como equipo</span>
               </a>
             </h4>
           </div>
         </div>
-        <div class="panel panel-default">
+        <!--======== Clients Panel ========-->
+        <div class="panel panel-default clients-panel">
           <div id="collapseThree" class="panel-collapse collapse">
-            <div class="panel-body">
-              <div class="container bkg-image-container">
-                <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/bkg_location.png" />
-                <div class="bkg-image-content">
-                  <p class="eyebrow">Anim pariatur cliche reprehenderit</p>
-                  <div class="col-sm-6 col-md-5 col-md-offset-7 col-lg-6 col-lg-offset-0">
-                    <h3>Anim pariatur cliche</h3>
-                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
-                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
-                  </div>
+            <div class="panel-body container">
+              <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/why/clients/bkg-clients.png" />
+              <p class="eyebrow">3 - Trabajamos con las empresas más innovadoras</p>
+              <div class="panel-column-right">
+                <h3>Carrera Internacional</h3>
+                <p>El 80% de nuestro clientes de encuentras en Estados Unidos y Euroopa, lo que brinda a los Globers proyección internacional, a la altura de los mejores ingenieros del mundo.</p>
+                <p>No elijas una, podés trabajar con todas: Somos una de las pocas empresas que puede brindarte un portafolio tan amplio de marcas globales con las que trabajar.</p>
+              </div>
+              <ul class="clients-list">
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/fox.png" alt="Fox" /></li>
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/ea.png" alt="EA" /></li>
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/coca-cola.png" alt="Coca-Cola" /></li>
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/fox.png" alt="Fox" /></li>
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/ea.png" alt="EA" /></li>
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/coca-cola.png" alt="Coca-Cola" /></li>
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/cisco.png" alt="Cisco" /></li>
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/mercado-libre.png" alt="Mercado Libre" /></li>
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/linkedin.png" alt="Linkedin" /></li>
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/cisco.png" alt="Cisco" /></li>
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/mercado-libre.png" alt="Mercado Libre" /></li>
+                <li><img src="<?php print path_to_theme(); ?>/assets/why/clients/linkedin.png" alt="Linkedin" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                <span class="container">3 - Trabajamos con las empresas más innovadoras</span>
+              </a>
+            </h4>
+          </div>
+        </div>
+        <!--======== Projects Panel ========-->
+        <div class="panel panel-default projects-panel">
+          <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body container">
+              <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/why/projects/bkg-projects.png" />
+              <p class="eyebrow">4 - Tenemos 1033 proyectos donde podrás trabajar</p>
+              <div class="panel-column-right">
+                <h3>Open Positions</h3>
+                <p>Publicamos las posiciones abiertas y damos autonomía para que los Globers elijan en qué proyectos quieren participar.</p>
+                <p>Durante el 2013 más de 75 Globers cambiaron de posición.</p>
+                <div class="image-wrapper">
+                  <img class="image-display" src="<?php print path_to_theme(); ?>/assets/why/projects/projects.png" />
+                  <p class="image-caption">José se formó en Buenos Aires, y hoy trabaja en Sao Paulo</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                <span class="container">
-                  Tenemos 1033 proyectos donde podrás trabajar
-                </span>
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                <span class="container">4 - Tenemos 1033 proyectos donde podrás trabajar</span>
               </a>
             </h4>
           </div>
         </div>
-        <div class="panel panel-default">
-          <div id="collapseThree" class="panel-collapse collapse">
+        <!--======== Labs Panel ========-->
+        <div class="panel panel-default labs-panel">
+          <div id="collapseFive" class="panel-collapse collapse">
             <div class="panel-body">
               <div class="container bkg-image-container">
-                <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/bkg_location.png" />
-                <div class="bkg-image-content">
-                  <p class="eyebrow">Anim pariatur cliche reprehenderit</p>
-                  <div class="col-sm-6 col-md-5 col-md-offset-7 col-lg-6 col-lg-offset-0">
-                    <h3>Anim pariatur cliche</h3>
-                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
-                    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
+                <img class="bkg-image" src="<?php print path_to_theme(); ?>/assets/why/clients/bkg-clients.png" />
+                <p class="eyebrow">5 - Anim pariatur cliche reprehenderit</p>
+                <div class="panel-column-left">
+                  <div class="image-wrapper">
+                    <img class="image-display" src="<?php print path_to_theme(); ?>/assets/why/labs/innovation.png" />
+                    <p class="image-caption">José se formó en Buenos Aires, y hoy trabaja en Sao Paulo</p>
                   </div>
+                  <div class="image-wrapper">
+                    <img class="image-display" src="<?php print path_to_theme(); ?>/assets/why/labs/brainstorm.png" />
+                    <p class="image-caption">José se formó en Buenos Aires, y hoy trabaja en Sao Paulo</p>
+                  </div>
+                </div>
+                <div class="panel-column-right">
+                  <h3>Capacitación Globers</h3>
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
+                  <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
                 <span class="container">
-                  Expertos harán una diferencia en tu carrera
+                  5 - Expertos harán una diferencia en tu carrera
                 </span>
               </a>
             </h4>
