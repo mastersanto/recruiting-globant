@@ -387,16 +387,95 @@
           </div>
         </div>
       </div>
-
     </section>
-      
+
+    <!--======== Sumate ========-->
     <section id="row4" class="glb-section hero contact" style="background-image: url('<?php print path_to_theme(); ?>/assets/bkg_contact.png');">
       <div class="container">
         <?php print $content['row3']; ?>
 
         <h2 class="section-title">Sumate a nuestro equipo</h2>
-        <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>
+        <p class="section-subtitle">Buscá dentro de las posiciones disponibles.</p>
+        <div id="filters">
+          <p class="dropdown-label">Filtrar:</p>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+              Locación
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">New York</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Buenos Aires</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tucumán</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Other US cities</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Tandil</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Boston</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mar del Plata</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Bogotá</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">London</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Bahía Blanca</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">San Francisco</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">La Plata</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Medellín</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Rio de Janeiro</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sao Paulo</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Córdoba</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Montevideo</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Resistencia</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Curitiba</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Rosario</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Ciudad de México DF</a></li>
+              <li role="presentation" class="divider"></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+              Estudio
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Consumer Experience</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Gaming</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Big Data</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Quality Engineering</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Enterprise</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">UX & Social</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Mobile</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cloud Computing</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Product Innovation</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">After Going Live</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wearables & IOT</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Digital Content</a></li>
+            </ul>
+          </div>
+        </div>
+        <ul id="filter-results">
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+          <li><a href="#" class="icon-position"><strong>UX Senior</strong> Buenos Aires</a></li>
+        </ul>
       </div>
     </section>
   </div>

@@ -609,6 +609,37 @@
 	}
 }
 
+// Filters
+//-------------------------
+#filters {
+	margin-bottom: 20px;
+	text-align: center;
+
+	p,
+	.dropdown {
+		display: inline-block;
+	}
+}
+
+#filter-results {
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+
+	li {
+		float: left;
+		width: 25%;
+		a {
+			background-color: rgba(255, 255, 255, 0.3);
+			border: 1px solid white;
+			display: block;
+			margin: 1px;
+			text-transform: uppercase;
+		}
+	}
+}
+
 // Contact
 //-------------------------
 .contact {
@@ -618,7 +649,8 @@
 // Footer
 //---------------------------------------------
 .footer {
-	background-color: white;
+	background-color: @glb-blue;
+	color: white;
 	margin: 0;
 	position: relative;
 	z-index: 1;
