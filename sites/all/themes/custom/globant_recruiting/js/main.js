@@ -1,8 +1,8 @@
 /**
  * @file
- * bootstrap.js
+ * main.js
  *
- * Provides general enhancements and fixes to Bootstrap's JS files.
+ * Main Javascript file for GLB Recruiting site
  */
 'use strict';
 
@@ -10,14 +10,16 @@ var GLB = GLB || {};
 
 GLB.sectionResize = {
 	init: function(ev, $) {
-		var $sections = $('.glb-section'),
+		var $sections = jQuery('.glb-section'),
 			sectionMinHeight = ev.target.innerHeight + 'px';
 		$sections.css('min-height', sectionMinHeight);
 	}
 }
 
-GLB.start = (function(window, document, $) {
-	$(window).on('resize', function(ev) {
-		GLB.sectionResize.init(ev, $);
-	});
-})(window, document, jQuery);
+jQuery(document).ready(function() {
+
+    jQuery(window).resize(function(ev) {
+    	GLB.sectionResize.init(ev, jQuery);
+    }).resize();
+    
+});

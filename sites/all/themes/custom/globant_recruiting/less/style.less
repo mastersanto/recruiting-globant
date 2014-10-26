@@ -11,17 +11,119 @@
 @import 'content.less';
 @import 'footer.less';
 
+// Global
+//---------------------------------------------
+.section-subtitle {
+	strong {
+		font-weight: bold;
+	}
+}
+
+.bkg-green {
+	background-color: @glb-green;
+}
+.bkg-orange {
+	background-color: @glb-orange;
+}
+.bkg-blue {
+	background-color: @glb-blue;
+}
+.bkg-violet {
+	background-color: @glb-lilac;
+}
+
+// Images with label
+//---------------------------------------------
+.image-wrapper {
+	position: relative;
+	text-align: center;
+	vertical-align: bottom;
+	z-index: 1;
+
+	&:before {
+		bottom: 9px;
+		content: '';
+		height: 28px;
+		left: 0;
+		position: absolute;
+		right: 0;
+
+		.orange-base & {
+			background-color: @glb-orange-dark;
+		}
+		.yellow-base & {
+			background-color: @glb-yellow-dark;
+		}
+		.green-base & {
+			background-color: @glb-green-dark;
+		}
+		.blue-base & {
+			background-color: @glb-blue-dark;
+		}
+		.lilac-base & {
+			background-color: @glb-lilac;
+		}
+	}
+
+	.image-display {
+		max-width: 90%;
+		position: relative;;
+		z-index: 2;
+	}
+
+	.image-caption {
+		bottom: 18px;
+		color: white;
+		font-size: 10px;
+		left: 3%;
+		line-height: 28px;
+		position: absolute;
+		right: 3%;
+		z-index: 3;
+
+		.orange-base & {
+			background-color: @glb-orange;
+		}
+		.yellow-base & {
+			background-color: @glb-yellow;
+		}
+		.green-base & {
+			background-color: @glb-green;
+		}
+		.blue-base & {
+			background-color: @glb-blue;
+		}
+		.lilac-base & {
+			background-color: @glb-lilac;
+		}
+
+		.career-panel & {
+			text-transform: uppercase;
+		}
+	}
+}
+
 // Header
 //---------------------------------------------
 #navbar.navbar-default {
+	#gradient > .vertical (rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0));
 	background-color: transparent;
-	background-image: none;
-	border-color: transparent;
+	border: 0 none;
+	border-radius: 0;
+	box-shadow: none;
+	height: 70px;
 	left: 0;
+	margin: 0;
+	max-width: 100%;
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: 1;
+	width: 100%;
+	z-index: 2;
+
+	.logo {
+		margin-left: 15px;
+	}
 
 	.navbar-collapse {
 		float: right;
@@ -29,6 +131,8 @@
 
 	.navbar-nav > li > a {
 		color: white;
+		text-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
+		text-transform: uppercase;
 	}
 }
 
@@ -38,153 +142,540 @@
 	background-color: white;
 	overflow: hidden;
 	position: relative;
+	transition: min-height 1s ease;
 
-	h2,
-	p.subtitle {
+	.section-title,
+	.section-subtitle {
 		text-align: center;
 		text-transform:uppercase;
 	}
 
-	// Hero
-	//-------------------------
-	&.hero {
-
-		.hero-container {
-			bottom: 0;
-			left: -100%;
-			position:fixed;
-			right: 0;
-			text-align: center;
-			top: 0;
-			width: 300%;
-
-			.hero-image {
-				min-height: 100%;
-			}
-		}
+	.section-title {
+		font-size: 51px;
+		margin-bottom: 28px;
+		margin-top: 100px;
 	}
 
-	// Location
-	//-------------------------
-	&.location {
-
-		// Collapsible
-		//-------------------------
-		#accordion {
-			margin: 0;
-
-			.panel-heading {
-				padding: 0;
-
-				.panel-title {
-					text-align: right;
-
-					> a {
-						display: block;
-						padding: 10px 15px;
-						text-transform: uppercase;
-
-						span {
-							display: block;
-						}
-					}
-				}			
-			}
-		}
-
-		.bkg-image-content {
-			.eyebrow {
-				font-size: 24px;
-				text-align: right;
-				text-transform: uppercase;
-			}
-
-			h3 {
-				border-bottom: 2px solid #000;
-				padding-bottom: 8px;
-				text-align: right;
-			}
-		}
-	}
-
-	// Studios
-	//-------------------------
-	&.studios {
-
-		.studio{
-			height: 150px;
-			position: relative;
-
-			.studio-content {
-				bottom: 0;
-				left: 0;
-				position: absolute;
-				right: 0;
-				top: 0;
-
-				.studio-overlay {
-					background-color: rgba(255, 255, 255, 0.8);
-					color: black;
-					opacity: 0;
-					padding: 15px;
-					bottom: 0;
-					left: 0;
-					position: absolute;
-					right: 0;
-					top: 0;
-					transition: opacity .25s ease-in-out;
-				}
-
-				&:hover {
-					.studio-overlay {
-						opacity: 1;
-					}
-				}
-			}
-		}
-
-		.bkg-green {
-			background-color: @glb-green;
-		}
-		.bkg-orange {
-			background-color: @glb-orange;
-		}
-		.bkg-blue {
-			background-color: @glb-blue;
-		}
-		.bkg-violet {
-			background-color: @glb-violet;
-		}
-	}
-
-	// Contact
-	//-------------------------
-	&.contact {
-		font-color: white;
+	.section-subtitle {
+		font-size: 32px;
+		line-height: 40px;
+		margin-bottom: 70px;
 	}
 }
 
-// Bkg Images
+// Hero
+//-------------------------
+.hero {
+	.hero-container {
+		bottom: 0;
+		left: -100%;
+		position:fixed;
+		right: 0;
+		text-align: center;
+
+		top: 0;
+		width: 300%;
+
+		.hero-image {
+			min-height: 100%;
+		}
+	}
+}
+
+// Collapsible
+//-------------------------
+#accordion {
+	border-top: 1px solid #ddd;
+	margin: 0;
+
+	.panel {
+		border: 0 none;
+		border-radius: 0;
+		margin-top: 0;
+
+		.panel-collapse {
+			border-bottom: 1px solid #ddd;
+
+			&.in + .panel-heading {
+				display: none;
+			}
+		}
+
+		.panel-heading {
+			background: none;
+			border-radius: 0;
+			border-bottom: 1px solid @glb-gray-lighter;
+			padding: 0;
+
+			.panel-title {
+				text-align: right;
+
+				> a {
+					color: @glb-gray-light;
+					display: block;
+					font-size: 12px;
+					padding: 10px 15px;
+					text-transform: uppercase;
+
+					&:hover {
+						color: @glb-gray;
+						text-decoration: none;
+					}
+
+					span {
+						display: block;
+					}
+				}
+			}			
+		}
+
+		.collapse-in {
+			+ .panel-heading {
+				display: none;
+			}
+		}		
+	}
+}
+
+// Pane Content
 //---------------------------------------------
-.bkg-image-container {
+.panel-body {
+	overflow: hidden;
+	padding-bottom: 25px;
+	padding-top: 25px;
 	position: relative;
 
-	.bkg-image {
+	&.container {
+		//padding-left: 0;
+		//padding-right: 0;
 	}
 
-	.bkg-image-content {
+	// Bkg Images
+	//---------------------------------------------
+	.bkg-image {
 		left: 0;
 		position: absolute;
 		right: 0;
-		top: 0;
+		top: 30px;
+		z-index: 0;
 	}
+
+	// Eyebrow
+	//---------------------------------------------
+	.eyebrow {
+		color: @glb-gray;
+		font-size: 22px;
+		position: relative;
+		text-align: right;
+		text-transform: uppercase;
+	}
+}
+
+// Panel Columns
+//---------------------------------------------
+.panel-column-left,
+.panel-column-right {
+	overflow: hidden;
+	position: relative;
+	width: 40%;
+}
+
+// Panel Column Left
+//---------------------------------------------
+.panel-column-left {
+	float: left;
+	padding-top: 40px;
+
+	.image-wrapper {
+		margin-bottom: 20px;
+	}
+}
+
+// Panel Column Right
+//---------------------------------------------
+.panel-column-right {
+	float: right;
+	z-index: 1;
+
+	h3 {
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+		font-size: 20px;
+		margin-bottom: 16px;
+		margin-top: 0;
+		padding-bottom: 16px;
+		text-align: right;
+		text-transform: uppercase;
+
+		.orange-base & {
+			border-color: @glb-orange;
+			color: @glb-orange;
+		}
+		.yellow-base & {
+			border-color: @glb-yellow;
+			color: @glb-yellow;
+		}
+		.green-base & {
+			border-color: @glb-green;
+			color: @glb-green;
+		}
+		.blue-base & {
+			border-color: @glb-blue;
+			color: @glb-blue;
+		}
+		.lilac-base & {
+			border-color: @glb-lilac;
+			color: @glb-lilac;
+		}
+	}
+
+	a {
+		.orange-base & {
+			color: @glb-orange;
+		}
+		.yellow-base & {
+			color: @glb-yellow;
+		}
+		.green-base & {
+			color: @glb-green;
+		}
+		.blue-base & {
+			color: @glb-blue;
+		}
+		.lilac-base & {
+			color: @glb-lilac;
+		}
+	}
+
+	p {
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+}
+
+// Images Row - 3 columns
+//---------------------------------------------
+.row-3-images {
+	clear: both;
+
+	.image-wrapper {
+		display: inline-block;
+		width: 32.9%;
+	}
+}
+
+// Location
+//-------------------------
+.location {
+}
+
+// min-height Section calculated from .bkg-image = imageHeight + (topPosition * 2)
+// topPosition = 30
+
+// Offices
+//-------------------------
+.offices-panel {
+	.panel-body {
+		min-height: 528px;
+	}
+}
+
+// Career
+//-------------------------
+.career-panel {
+	.panel-body {
+		min-height: 480px;
+	}
+}
+
+// Clients
+//-------------------------
+.clients-panel {
+	.panel-body {
+		min-height: 480px;
+	}
+
+	.clients-list {
+		clear: both;
+		list-style: none;
+		padding: 0;
+		position: relative;
+		z-index: 1;
+
+		li {
+			box-sizing: border-box;
+			display: inline-block;
+			padding: 0 5px;
+			text-align: center;
+			vertical-align: bottom;
+			width: 16%;
+
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+// Projects
+//-------------------------
+.projects-panel {
+	.panel-body {
+		min-height: 488px;
+	}
+}
+
+// Labs
+//-------------------------
+.labs-panel {
+	.panel-body {
+		min-height: 480px;
+	}
+}
+
+// Studios
+//-------------------------
+.studios {
+	.studio{
+		height: 200px;
+		position: relative;
+
+		.studio-content {
+			bottom: 0;
+			left: 0;
+			line-height: 200px;
+			position: absolute;
+			right: 0;
+			top: 0;
+
+			> img {
+				max-width: 100%;
+			}
+
+			.studio-overlay {
+				background-color: rgba(255, 255, 255, 0.6);
+				bottom: 0;
+				color: white;
+				font-size: 19px;
+				left: 0;
+				line-height: 19px;
+				opacity: 0;
+				padding: 15px;
+				position: absolute;
+				right: 0;
+				top: 0;
+				text-transform: uppercase;
+				transition: opacity .25s ease-in-out;
+
+				.studio-name {
+					color: @glb-gray;
+					display: block;
+					font-size: 16px;
+					line-height: 16px;
+				}
+			}
+
+			&:hover {
+				.studio-overlay {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+// Modal
+//---------------------------------------------
+.modal-content {
+	border-radius: 0;
+}
+
+.modal-header {
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+
+	.orange-base & {
+		border-color: @glb-orange;
+	}
+	.yellow-base & {
+		border-color: @glb-yellow;
+	}
+	.green-base & {
+		border-color: @glb-green;
+	}
+	.blue-base & {
+		border-color: @glb-blue;
+	}
+	.lilac-base & {
+		border-color: @glb-lilac;
+	}
+
+	.modal-title,
+	.studio-title {
+		text-transform: uppercase;
+	}
+
+	.modal-title {
+		font-size: 20px;
+		line-height: 20px;
+
+		.orange-base & {
+			color: @glb-orange;
+		}
+	}
+
+	.studio-title {
+		color: @glb-gray;
+		font-size: 16px;
+	}
+}
+
+.modal-body {
+	padding: 15px;
+}
+
+.modal-column-left,
+.modal-column-right {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.modal-column-left {
+	width: 40%;
+
+	p {
+		font-size: 12px;
+
+		.modal-body & {
+			line-height: 14px;
+		}
+
+		&.excerpt {
+			font-weight: bold;
+		}
+	}
+}
+
+.modal-column-right {
+	text-align: center;
+	width: 55%;
+
+	.modal-image {
+		max-width: 100%;
+	}
+}
+
+.modal-footer {
+	border-top-style: solid;
+	border-top-width: 2px;
+	text-align: left;
+
+	.orange-base & {
+		border-color: @glb-orange;
+	}
+	.yellow-base & {
+		border-color: @glb-yellow;
+	}
+	.green-base & {
+		border-color: @glb-green;
+	}
+	.blue-base & {
+		border-color: @glb-blue;
+	}
+	.lilac-base & {
+		border-color: @glb-lilac;
+	}
+
+	p {
+		text-transform: uppercase;
+
+		span {
+			.orange-base & {
+				color: @glb-orange;
+			}
+			.yellow-base & {
+				color: @glb-yellow;
+			}
+			.green-base & {
+				color: @glb-green;
+			}
+			.blue-base & {
+				color: @glb-blue;
+			}
+			.lilac-base & {
+				color: @glb-lilac;
+			}
+		}
+	}
+}
+
+// Filters
+//-------------------------
+#filters {
+	margin-bottom: 20px;
+	text-align: center;
+	text-transform: uppercase;
+
+	ul.dropdown-menu {
+		left: -250px;
+		width: 650px;
+
+		li {
+			display: inline-block;
+			vertical-align: bottom;
+
+			a {
+			}
+		}
+	}
+
+	p,
+	.dropdown {
+		display: inline-block;
+	}
+}
+
+#filter-results {
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+
+	li {
+		float: left;
+		width: 25%;
+		a {
+			background-color: rgba(255, 255, 255, 0.3);
+			border: 1px solid white;
+			color: white;
+			display: block;
+			margin: 1px;
+			padding: 3px 6px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+// Contact
+//-------------------------
+.contact {
+	color: white;
 }
 
 // Footer
 //---------------------------------------------
 .footer {
-	background-color: white;
+	background-color: @glb-blue;
+	color: white;
 	margin: 0;
 	position: relative;
 	z-index: 1;
+}
+
+// Admin Styles
+//---------------------------------------------
+.logged-in {
+	#navbar.navbar-default {
+		margin-top: 20px;
+	}
 }
