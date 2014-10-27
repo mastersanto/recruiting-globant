@@ -25,10 +25,22 @@ function search_positions_block_view($delta = '') {
 
             $module_path = drupal_get_path('module', 'search_positions');
             drupal_add_js($module_path . '/js/search/app.js');
+            // Get terms from 'Ciudades' vocabulary
+            $vocabulary = taxonomy_vocabulary_machine_name_load('ciudades');
+            $cities = entity_load('taxonomy_term', FALSE, array('vid' => $vocabulary->vid));
+            // Get terms from 'Estudios' vocabulary
+            $vocabulary = taxonomy_vocabulary_machine_name_load('estudios');
+            $studios = entity_load('taxonomy_term', FALSE, array('vid' => $vocabulary->vid));
+            // Get available positions
+            $positions = node_load_multiple(array(), array('type' => 'posicion', 'status' => 1));
 
-            $block['content'] = array(
-                '#theme' => 'search_positions_block'
+            $data = array(
+              'cities'    =>  $cities,
+              'studios'   =>  $studios,
+              'positions' =>  $positions,
             );
+
+            $block['content'] = theme('search_positions_block', $data);
 
             break;
     }
