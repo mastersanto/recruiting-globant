@@ -7,7 +7,7 @@
                 <?php print $node['bk_image'] ?>
                 <p class="eyebrow"><?php print $node['title'] ?></p>
                 <div class="panel-column-right">
-                  <h3>G-moves</h3>
+                  <h3><?php print $node['subtitulo'] ?></h3>
                   <?php print $node['description'][LANGUAGE_NONE][0]['safe_value'] ?>
                 </div>
                 <div class="row-3-images">

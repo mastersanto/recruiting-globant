@@ -65,9 +65,9 @@ function why_globant_block_view($delta = '') {
                         ));
                     }
                 }
-
                 $content['nodes'][$key] = array(
                     'title'           =>  $node->title,
+                    'subtitulo'       =>  $node->field_subtitulo[LANGUAGE_NONE][0]['safe_value'],
                     'description'     =>  $node->body,
                     'bk_image'        =>  $bk_image,
                     'images'          =>  $images,
