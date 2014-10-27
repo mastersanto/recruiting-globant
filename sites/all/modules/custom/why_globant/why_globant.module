@@ -24,6 +24,13 @@ function why_globant_block_view($delta = '') {
         case 'why_globant':
             $content = array();
             $nodes = why_globant_get_nodequeue_content('why_globant');
+            $colors = array(
+              'blue-base',
+              'green-base',
+              'lilac-base',
+              'yellow-base',
+              'orange-base',
+            );
 
             foreach ($nodes as $key => $node) {
                 // Get background image
@@ -71,7 +78,8 @@ function why_globant_block_view($delta = '') {
                     'description'     =>  $node->body,
                     'bk_image'        =>  $bk_image,
                     'images'          =>  $images,
-                    'logos'           =>  $logos
+                    'logos'           =>  $logos,
+                    'color'           =>  $colors[$key]
                 );
             }
 
