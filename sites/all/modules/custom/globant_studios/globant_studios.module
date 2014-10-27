@@ -6,7 +6,7 @@
 function globant_studios_block_info() {
   $blocks = array();
 
-  $blocks['globant_studios'] => array(
+  $blocks['globant_studios'] = array(
     'info' => t('Studios in Globant')
   );
 
@@ -21,10 +21,46 @@ function globant_studios_block_view($delta = '') {
 
   switch($delta) {
     case 'globant_studios':
+        $content = array();
+        $nodes = globant_studios_get_nodequeue_content('videos');
 
-      $block ['content'] = '';
+        $content[0]['title'] = $nodes[0]->title;
+        $content[1]['title'] = $nodes[1]->title;
 
-      break;
+        // Render YouTube video
+        $content[0]['video'] = theme('media_youtube_video', array(
+            'uri' => $nodes[0]->field_video_youtube[LANGUAGE_NONE][0]['uri'],
+            'options' => array(
+                'height'  =>  '300',
+                'width'   =>  '500',
+            )
+        ));
+        // Render YouTube video
+        $content[1]['video'] = theme('media_youtube_video', array(
+          'uri' => $nodes[1]->field_video_youtube[LANGUAGE_NONE][0]['uri'],
+          'options' => array(
+            'height'  =>  '300',
+            'width'   =>  '500',
+          )
+        ));
+        // Render thumbnail
+        // Load the file
+        $file = file_load($nodes[0]->field_video_youtube[LANGUAGE_NONE][0]['fid']);
+        // Set up the settings array with your image style
+        $display['settings'] = array('image_style' => 'video_thumb_230_200');
+        // Get the render array for the thumbnail image
+        $image_render_array = media_youtube_file_formatter_image_view($file, $display, LANGUAGE_NONE);
+        // Render it
+        $content[0]['thumb'] = render($image_render_array);
+
+        // Load the file
+        $content[1]['thumb'] = theme('image', array(
+          'path'        =>  $nodes[1]->field_miniatura[LANGUAGE_NONE][0]['uri'],
+        ));
+
+        $block ['content'] = theme('globant_studios_block', $content);
+
+        break;
   }
 
   return $block;
@@ -40,4 +76,16 @@ function globant_studios_theme() {
       'template'  =>  'templates/globant-studios-block'
     )
   );
+}
+/**
+ * Return nodes from nodequeue by its machineame
+ * @param $nodequeue_name Nodequeue machine name
+ * @return array
+ */
+function globant_studios_get_nodequeue_content($nodequeue_name) {
+
+  $nodequeue = nodequeue_load_queue_by_name($nodequeue_name);
+  $nodes = nodequeue_load_nodes($nodequeue->qid);
+
+  return $nodes;
 }

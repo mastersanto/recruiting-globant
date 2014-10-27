@@ -22,24 +22,56 @@ function why_globant_block_view($delta = '') {
 
     switch($delta) {
         case 'why_globant':
-
             $content = array();
-            $image = '';
             $nodes = why_globant_get_nodequeue_content('why_globant');
 
             foreach ($nodes as $key => $node) {
-                if ($node->field_imagen) {
-                    $image = theme('image', array(
-                        'path'  => $node->field_imagen[LANGUAGE_NONE][0]['uri'],
-                        'alt'   => $node->title,
-                        'class' =>  'hero-image'
+                // Get background image
+                if ($node->field_imagen_fondo) {
+                    $bk_image = theme('image', array(
+                        'path'        => $node->field_imagen_fondo[LANGUAGE_NONE][0]['uri'],
+                        'alt'         => $node->title,
+                        'attributes'  => array(
+                            'class' => 'bkg-image'
+                        )
                     ));
+                }
+                // Get images related with the content
+                $images = array();
+                if ($node->field_imagenes[LANGUAGE_NONE]) {
+                    foreach ($node->field_imagenes[LANGUAGE_NONE] as $index => $image) {
+                        $images[$index]['image'] = theme('image', array(
+                            'path'        => $image['uri'],
+                            'alt'         => $image['alt'],
+                            'title'       => $image['title'],
+                            'attributes'  => array(
+                                'class' => 'image-display'
+                            )
+                        ));
+                        $images[$index]['title']  = $image['title'];
+                    }
+                }
+                // Get logos
+                $logos = array();
+                if ($node->field_clientes) {
+                    foreach ($node->field_clientes[LANGUAGE_NONE] as $index => $image) {
+                        $logos[] = theme('image', array(
+                            'path'        => $image['uri'],
+                            'alt'         => $image['alt'],
+                            'title'       => $image['title'],
+                            'attributes'  => array(
+                                'class' => 'image-display'
+                            )
+                        ));
+                    }
                 }
 
                 $content['nodes'][$key] = array(
-                    'title'         =>  $node->title,
-                    'description'   =>  $node->body,
-                    'image'         =>  $image
+                    'title'           =>  $node->title,
+                    'description'     =>  $node->body,
+                    'bk_image'        =>  $bk_image,
+                    'images'          =>  $images,
+                    'logos'           =>  $logos
                 );
             }
 
@@ -61,7 +93,6 @@ function why_globant_theme() {
         )
     );
 }
-
 /**
  * Return nodes from nodequeue by its machineame
  * @param $nodequeue_name Nodequeue machine name

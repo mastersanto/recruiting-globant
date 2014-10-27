@@ -3,7 +3,6 @@
 /**
  * Implements hook_block_info
  */
-
 function image_hero_block_info() {
 
     $blocks = array();
@@ -18,7 +17,6 @@ function image_hero_block_info() {
 /**
  * Implements hook_block_view
  */
-
 function image_hero_block_view($delta = '') {
     $block = array();
 
@@ -26,13 +24,12 @@ function image_hero_block_view($delta = '') {
         case 'image_hero':
 
             $nodes = image_hero_get_nodequeue_content('imagen_destacada');
-            $image = '';
             $content = array();
             $node = array_pop($nodes);
 
             if ($node) {
                 $image = theme('image', array(
-                    'path'  => $node->field_imagen_destacada[LANGUAGE_NONE][0]['uri'],
+                    'path'  => $node->field_imagen[LANGUAGE_NONE][0]['uri'],
                     'alt'   => $node->title,
                     'class' =>  'hero-image'
                 ));
