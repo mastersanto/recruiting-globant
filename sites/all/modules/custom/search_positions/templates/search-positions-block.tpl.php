@@ -1,6 +1,4 @@
 <div id="search-positions" class="container">
-
-    {{1+1}}
   <h2 class="section-title">Sumate a nuestro equipo</h2>
   <p class="section-subtitle">Buscá dentro de las posiciones disponibles.</p>
   <div id="filters">
