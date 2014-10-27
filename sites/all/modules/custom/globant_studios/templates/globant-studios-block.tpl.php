@@ -77,17 +77,17 @@
   </div>
   <div class="col-md-2 studio bkg-green">
     <a href="#" class="studio-content" data-toggle="modal" data-target="#studio-09">
-      <?= $variables[1]['thumb'] ?>
+      <?php print $variables[1]['thumb'] ?>
       <span class="studio-overlay">
-          <?= $variables[1]['title'] ?>
+          <?php print $variables[1]['title'] ?>
       </span>
     </a>
   </div>
   <div class="col-md-2 studio bkg-blue">
     <a href="#" class="studio-content" data-toggle="modal" data-target="#studio-10">
-      <?= $variables[0]['thumb'] ?>
+      <?php print $variables[0]['thumb'] ?>
       <span class="studio-overlay">
-          <?= $variables[0]['title'] ?>
+          <?php print $variables[0]['title'] ?>
       </span>
     </a>
   </div>
@@ -119,11 +119,11 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <div class="modal-column-left">
-          <h4 class="modal-title" id="myModalLabel"><?= $variables[1]['title'] ?></h4>
+          <h4 class="modal-title" id="myModalLabel"><?php print $variables[1]['title'] ?></h4>
         </div>
       </div>
       <div class="modal-body">
-        <?= $variables[1]['video'] ?>
+        <?php print $variables[1]['video'] ?>
       </div>
     </div>
   </div>
@@ -135,11 +135,11 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
         <div class="modal-column-left">
-          <h4 class="modal-title" id="myModalLabel"><?= $variables[0]['title'] ?></h4>
+          <h4 class="modal-title" id="myModalLabel"><?php print $variables[0]['title'] ?></h4>
         </div>
       </div>
       <div class="modal-body">
-        <?= $variables[0]['video'] ?>
+        <?php print $variables[0]['video'] ?>
       </div>
     </div>
   </div>
