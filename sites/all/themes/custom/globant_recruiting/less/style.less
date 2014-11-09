@@ -656,10 +656,45 @@
 	}
 }
 
-// Contact
+// Conocenos
 //-------------------------
-.contact {
-	color: white;
+.conocenos {
+	text-align: center;
+
+	.section-subtitle {
+		margin-bottom: 25px;
+	}
+
+	.carousel {
+		margin-bottom: 16px;
+		margin-top: 16px;
+		padding-bottom: 36px;
+
+		.carousel-indicators {
+			bottom: 0;
+			margin-bottom: 0;
+
+			li {
+				border-color: @glb-gray-light;
+				border-radius: 16px;
+				margin: 0;
+				height: 16px;
+				width: 16px;
+
+				&.active {
+					background-color: @glb-blue;
+				}
+			}
+		} 
+
+		.carousel-inner {
+			.item {
+				a {
+					color: @glb-blue;
+				}
+			}
+		}
+	}
 }
 
 // Footer
