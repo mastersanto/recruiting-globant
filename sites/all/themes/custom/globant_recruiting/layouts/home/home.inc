@@ -15,5 +15,6 @@ $plugin = array(
       'row2' => t('Row 2'),
       'row3' => t('Row 3'),
       'row4' => t('Row 4'),
+      'row5' => t('Row 5'),
   ),
 );

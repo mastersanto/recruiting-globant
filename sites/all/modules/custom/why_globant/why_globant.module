@@ -8,7 +8,7 @@ function why_globant_block_info() {
     $blocks = array();
 
     $blocks['why_globant'] = array(
-        'info' => t('Why Gloant'),
+        'info' => t('Why Globant'),
     );
 
     return $blocks;
@@ -102,7 +102,7 @@ function why_globant_theme() {
     );
 }
 /**
- * Return nodes from nodequeue by its machineame
+ * Return nodes from nodequeue by its machinename
  * @param $nodequeue_name Nodequeue machine name
  * @return array
  */

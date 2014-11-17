@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * Implements hook_block_info
+ */
+function about_us_block_info() {
+  $blocks = array();
+
+  $blocks['about_globant'] = array(
+    'info' => t('About Globant'),
+  );
+
+  return $blocks;
+}
+/**
+ * Implements hook_block_view()
+ */
+function about_us_block_view($delta = '') {
+  $block = array();
+
+  switch($delta) {
+    case 'about_globant':
+      $content = array();
+      $statements = array();
+      $node = about_globant_get_nodequeue_content('conocenos');
+
+      foreach ($node->field_informacion_destacada[LANGUAGE_NONE] as $text) {
+        $statements[] = $text['value'];
+      }
+
+      $content = array(
+        'title' =>  $node->title,
+        'video' =>  theme('media_youtube_video', array(
+          'uri' => $node->field_video_youtube[LANGUAGE_NONE][0]['uri'],
+          'options' => array(
+            'height'  =>  '277',
+            'width'   =>  '492',
+          )
+        )),
+        'statements'  =>  $statements,
+      );
+
+      $block ['content'] = theme('about_globant_block', $content);
+
+      break;
+  }
+
+  return $block;
+}
+
+/**
+ * Implements hook_theme()
+ */
+function about_us_theme() {
+  return array(
+    'about_globant_block' => array(
+      'variables' => array(),
+      'template'  => 'templates/about-globant-block'
+    )
+  );
+}
+
+/**
+ * Return nodes from nodequeue by its machinename
+ * @param $nodequeue_name Nodequeue machine name
+ * @return array
+ */
+function about_globant_get_nodequeue_content($nodequeue_name) {
+
+  $nodequeue = nodequeue_load_queue_by_name($nodequeue_name);
+  $nodes = nodequeue_load_nodes($nodequeue->qid);
+
+  return array_pop($nodes);
+}
+

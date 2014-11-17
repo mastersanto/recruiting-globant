@@ -35,32 +35,8 @@
 
     <!--======== Conocenos ========-->
     <section id="row5" class="glb-section conocenos blue-base">
-      <div class="container">
-
-        <h2 class="section-title">Conocenos</h2>
-        <p class="section-subtitle">Somos un nuevo tipo de jugador entre las empresas de servicios de tecnología</p>
-
-        <iframe width="492" height="277" src="//www.youtube.com/embed/-auLCHCAkWA" frameborder="0" allowfullscreen></iframe>
-
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <p>Nos enfocamos en el desarrollo de soluciones de software innovadoras basadas en tecnologías y tendencias emergentes.</p>
-            </div>
-            <div class="item">
-              <p>Vení a desayunar con nosotros y a vivir la experiencia Glober! <br/>
-                Más información <a href="http://communications.globant.com/Comm/Recruiting/2014/Openhouse/" target="_blank">aquí</a>
-            </div>
-          </div>
-          
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          </ol>
-        </div>
-      </div>
+      <?php print $content['row5']; ?>
     </section>
+
   </div>
 </div>
