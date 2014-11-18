@@ -24,39 +24,29 @@ function globant_studios_block_view($delta = '') {
         $content = array();
         $nodes = globant_studios_get_nodequeue_content('videos');
 
-        $content[0]['title'] = $nodes[0]->title;
-        $content[1]['title'] = $nodes[1]->title;
-
-        // Render YouTube video
-        $content[0]['video'] = theme('media_youtube_video', array(
+        foreach ($nodes as $key => $node) {
+          $content['nodes'][$key]['title'] = $node->title;
+          $content['nodes'][$key]['video'] = theme('media_youtube_video', array(
             'uri' => $nodes[0]->field_video_youtube[LANGUAGE_NONE][0]['uri'],
             'options' => array(
-                'height'  =>  '300',
-                'width'   =>  '500',
+              'height'  =>  '300',
+              'width'   =>  '500',
             )
-        ));
-        // Render YouTube video
-        $content[1]['video'] = theme('media_youtube_video', array(
-          'uri' => $nodes[1]->field_video_youtube[LANGUAGE_NONE][0]['uri'],
-          'options' => array(
-            'height'  =>  '300',
-            'width'   =>  '500',
-          )
-        ));
+          ));
+          $content['nodes'][$key]['thumb'] = theme('image', array(
+            'path'  =>  $nodes[1]->field_miniatura[LANGUAGE_NONE][0]['uri'],
+          ));
+          $content['nodes'][$key]['color'] = str_replace('#', '', $node->field_color[LANGUAGE_NONE][0]['rgb']);
+        }
         // Render thumbnail
         // Load the file
-        $file = file_load($nodes[0]->field_video_youtube[LANGUAGE_NONE][0]['fid']);
+        /*$file = file_load($nodes[0]->field_video_youtube[LANGUAGE_NONE][0]['fid']);
         // Set up the settings array with your image style
         $display['settings'] = array('image_style' => 'video_thumb_230_200');
         // Get the render array for the thumbnail image
         $image_render_array = media_youtube_file_formatter_image_view($file, $display, LANGUAGE_NONE);
         // Render it
-        $content[0]['thumb'] = render($image_render_array);
-
-        // Load the file
-        $content[1]['thumb'] = theme('image', array(
-          'path'        =>  $nodes[1]->field_miniatura[LANGUAGE_NONE][0]['uri'],
-        ));
+        $content[0]['thumb'] = render($image_render_array);*/
 
         $block ['content'] = theme('globant_studios_block', $content);
 
