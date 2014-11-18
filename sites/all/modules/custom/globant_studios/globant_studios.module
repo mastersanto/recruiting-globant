@@ -34,7 +34,7 @@ function globant_studios_block_view($delta = '') {
             )
           ));
           $content['nodes'][$key]['thumb'] = theme('image', array(
-            'path'  =>  $nodes[1]->field_miniatura[LANGUAGE_NONE][0]['uri'],
+            'path'  =>  $node->field_miniatura[LANGUAGE_NONE][0]['uri'],
           ));
           $content['nodes'][$key]['color'] = str_replace('#', '', $node->field_color[LANGUAGE_NONE][0]['rgb']);
         }
