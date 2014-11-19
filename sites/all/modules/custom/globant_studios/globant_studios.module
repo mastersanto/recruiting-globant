@@ -24,6 +24,7 @@ function globant_studios_block_view($delta = '') {
         $content = array();
         $nodes = globant_studios_get_nodequeue_content('videos');
 
+
         foreach ($nodes as $key => $node) {
           $content['nodes'][$key]['title'] = $node->title;
           $content['nodes'][$key]['video'] = theme('media_youtube_video', array(
@@ -75,7 +76,7 @@ function globant_studios_theme() {
 function globant_studios_get_nodequeue_content($nodequeue_name) {
 
   $nodequeue = nodequeue_load_queue_by_name($nodequeue_name);
-  $nodes = nodequeue_load_nodes($nodequeue->qid);
+  $nodes = nodequeue_load_nodes($nodequeue->qid, false, 0, false);
 
   return $nodes;
 }

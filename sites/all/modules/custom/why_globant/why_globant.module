@@ -110,7 +110,7 @@ function why_globant_theme() {
 function why_globant_get_nodequeue_content($nodequeue_name) {
 
     $nodequeue = nodequeue_load_queue_by_name($nodequeue_name);
-    $nodes = nodequeue_load_nodes($nodequeue->qid);
+    $nodes = nodequeue_load_nodes($nodequeue->qid, false, 0, false);
 
     return $nodes;
 }
