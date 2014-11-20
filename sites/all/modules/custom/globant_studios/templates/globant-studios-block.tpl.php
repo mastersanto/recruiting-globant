@@ -6,7 +6,7 @@
   <?php endif; ?>
       <div class="col-md-2 studio">
       <a href="#" class="studio-content" data-toggle="modal" data-target="#video<?php print $key ?>">
-        <?php print $node['thumb'] ?>
+        <div class="thumbnail-wrapper"><?php print $node['thumb'] ?></div>
         <span class="studio-overlay">
             <?php print $node['title'] ?>
         </span>
