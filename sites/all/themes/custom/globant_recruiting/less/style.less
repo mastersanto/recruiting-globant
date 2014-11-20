@@ -19,6 +19,16 @@
 	}
 }
 
+
+.main-container {
+	overflow: hidden;
+}
+
+.pane-content > .row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 .bkg-green {
 	background-color: @glb-green;
 }
@@ -454,12 +464,12 @@
 			}
 
 			.studio-overlay {
-				background-color: rgba(255, 255, 255, 0.6);
+				background-color: rgba(0, 0, 0, 0.4);
 				bottom: 0;
 				color: white;
 				font-size: 19px;
 				left: 0;
-				line-height: 19px;
+				line-height: 25px;
 				opacity: 0;
 				padding: 15px;
 				position: absolute;
@@ -731,5 +741,53 @@
 .logged-in {
 	#navbar.navbar-default {
 		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+// Studios
+//-------------------------
+	.studios {
+		.studio{
+			border-top: 1px solid #ddd;
+			height: 120px;
+			
+			&:last-child {
+				border-bottom: 1px solid #ddd;
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.1);
+			}
+
+			.studio-content {
+				line-height: 120px;
+				position: absolute;
+
+				.thumbnail-wrapper {
+					display: inline-block;
+					float: left;
+					overflow: hidden;
+					width: 20%;
+				}
+
+				.studio-overlay {
+					background-color: transparent;
+					-moz-box-sizing: border-box;
+					-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+					color: @glb-gray;
+					display: inline-block;
+					opacity: 1;
+					position: relative;
+					width: 80%;
+
+					.studio-name {
+						font-size: 16px;
+						line-height: 16px;
+					}
+				}
+			}
+		}
 	}
 }
