@@ -609,52 +609,70 @@
 	}
 }
 
-// Filters
+// Positions
 //-------------------------
-#filters {
-	margin-bottom: 20px;
-	text-align: center;
-	text-transform: uppercase;
+.contact {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+}
 
-	ul.dropdown-menu {
-		left: -250px;
-		width: 650px;
+	// Filters
+	//-------------------------
+	#filters {
+		margin-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+
+		.dropdown-toggle {
+			text-transform: uppercase;
+		}
+
+		ul.dropdown-menu {
+			left: -250px;
+			width: 650px;
+
+			li {
+				display: inline-block;
+				vertical-align: bottom;
+
+				a {
+				}
+			}
+		}
+
+		p,
+		.dropdown {
+			display: inline-block;
+		}
+	}
+
+	#filter-results {
+		list-style: none;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
 
 		li {
-			display: inline-block;
-			vertical-align: bottom;
-
+			float: left;
+			width: 25%;
 			a {
+				background-color: rgba(255, 255, 255, 0.2);
+				border: 1px solid white;
+				color: white;
+				display: block;
+				margin: 1px;
+				padding: 3px 6px;
+				text-transform: uppercase;
+
+				&:hover {
+					background-color: rgba(255, 255, 255, 0.4);
+					text-decoration: none;
+				}
 			}
 		}
 	}
-
-	p,
-	.dropdown {
-		display: inline-block;
-	}
-}
-
-#filter-results {
-	list-style: none;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-
-	li {
-		float: left;
-		width: 25%;
-		a {
-			background-color: rgba(255, 255, 255, 0.3);
-			border: 1px solid white;
-			color: white;
-			display: block;
-			margin: 1px;
-			padding: 3px 6px;
-			text-transform: uppercase;
-		}
-	}
-}
 
 // Conocenos
 //-------------------------
