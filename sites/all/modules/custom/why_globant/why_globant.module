@@ -80,7 +80,7 @@ function why_globant_block_view($delta = '') {
                     'images'          =>  $images,
                     'logos'           =>  $logos,
                     'color'           =>  $colors[$key],
-                    'field_color'     =>  str_replace('#', '', $node->field_color[LANGUAGE_NONE][0]['rgb']),
+                    'field_color'     =>  'color-' . str_replace('#', '', $node->field_color[LANGUAGE_NONE][0]['rgb']),
                 );
             }
 
