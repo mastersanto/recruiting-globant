@@ -16,6 +16,7 @@ GLB.sectionResize = {
 		$sections.css('min-height', sectionMinHeight);
 		$heroImg.css('min-height', sectionMinHeight);
 	}
+}
 
 jQuery(document).ready(function() {
 
