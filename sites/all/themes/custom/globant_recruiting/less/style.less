@@ -730,10 +730,43 @@
 //---------------------------------------------
 .footer {
 	background-color: @glb-blue;
+	border-top: none 0;
 	color: white;
 	margin: 0;
+	padding: 20px;
 	position: relative;
+	text-align: center;
 	z-index: 1;
+
+	.block-title,
+	ul li {
+		color: white;
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 12px;
+	}
+
+	.block-title {
+		display: inline;
+	}
+
+	ul {
+		display: inline;
+		list-style: none;
+
+		li {
+			display: inline;
+			margin: 0 10px;
+
+			a {
+				color: white !important;
+
+				&:hover {
+					text-decoration: underline !important;
+				}
+			}
+		}
+	}
 }
 
 // Admin Styles
@@ -788,6 +821,20 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 639px) {
+// Footer
+//---------------------------------------------
+	.footer {
+		.block-title {
+			display: block;
+		}
+		
+		ul {
+			padding: 0;
 		}
 	}
 }
