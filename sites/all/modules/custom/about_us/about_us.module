@@ -20,7 +20,6 @@ function about_us_block_view($delta = '') {
 
   switch($delta) {
     case 'about_globant':
-      $content = array();
       $statements = array();
       $node = about_globant_get_nodequeue_content('conocenos');
 
@@ -28,19 +27,21 @@ function about_us_block_view($delta = '') {
         $statements[] = $text['value'];
       }
 
-      $content = array(
-        'title' =>  $node->title,
-        'video' =>  theme('media_youtube_video', array(
-          'uri' => $node->field_video_youtube[LANGUAGE_NONE][0]['uri'],
-          'options' => array(
-            'height'  =>  '277',
-            'width'   =>  '492',
-          )
-        )),
-        'statements'  =>  $statements,
-      );
+      if ($node->field_video_youtube[LANGUAGE_NONE][0]['uri']) {
+        $content = array(
+          'title' =>  $node->title,
+          'video' =>  theme('media_youtube_video', array(
+            'uri' => $node->field_video_youtube[LANGUAGE_NONE][0]['uri'],
+            'options' => array(
+              'height'  =>  '277',
+              'width'   =>  '492',
+            )
+          )),
+          'statements'  =>  $statements,
+        );
 
-      $block ['content'] = theme('about_globant_block', $content);
+        $block ['content'] = theme('about_globant_block', $content);
+      }
 
       break;
   }
