@@ -50,7 +50,9 @@ function globant_studios_block_view($delta = '') {
         // Render it
         $content[0]['thumb'] = render($image_render_array);*/
 
-        $block ['content'] = theme('globant_studios_block', $content);
+        if (!empty($content)) {
+          $block ['content'] = theme('globant_studios_block', $content);
+        }
 
         break;
   }
