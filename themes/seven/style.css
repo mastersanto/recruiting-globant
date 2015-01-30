@@ -678,6 +678,20 @@ a.button:active {
   text-decoration: none;
   color: #5a5a5a;
 }
+#edit-field-video-youtube {
+  position: relative;
+}
+#edit-field-video-youtube a.button.launcher,
+#edit-field-video-youtube a.button.remove {
+  bottom: 30px;
+  position: absolute;
+}
+#edit-field-video-youtube a.button.launcher {
+  left: 150px;
+}
+#edit-field-video-youtube a.button.remove {
+  left: 270px;
+}
 input.form-submit:active {
   background: #666;
   color: #fff;

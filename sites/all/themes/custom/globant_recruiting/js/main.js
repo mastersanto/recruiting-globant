@@ -18,10 +18,26 @@ GLB.sectionResize = {
 	}
 }
 
+GLB.accordions = {
+	init: function($) {
+		var $container = $('#row2'),
+			$accordions = $('.panel-collapse', $container);
+
+		$accordions.on("shown.bs.collapse", function () {
+		    $('html, body').animate({
+		    	// Adding Header's height 70px 
+		        scrollTop: $(this).offset().top - 70
+		    }, 500);
+		});
+	}
+}
+
 jQuery(document).ready(function() {
 
     jQuery(window).resize(function(ev) {
     	GLB.sectionResize.init(ev, jQuery);
     }).resize();
+
+	GLB.accordions.init(jQuery);
     
 });
