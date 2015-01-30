@@ -11,6 +11,35 @@
 @import 'content.less';
 @import 'footer.less';
 
+/* COLORS in Drupal
+blue
+color-47A6D4
+green
+color-C5E641
+lilac
+color-DFA5F0
+yellow
+color-F7DA46
+orange
+color-FFA340
+*/
+
+// Admin
+//---------------------------------------------
+.overlay-element #edit-field-video-youtube .button.launcher,
+.overlay-element #edit-field-video-youtube .button.remove {
+	position: relative;
+}
+#edit-field-video-youtube {
+	.button {
+		&.launcher,
+		&.remove {
+			position: relative;
+		}
+	}
+}
+
+
 // Global
 //---------------------------------------------
 .section-subtitle {
@@ -58,19 +87,19 @@
 		position: absolute;
 		right: 0;
 
-		.orange-base & {
+		.color-FFA340 & {
 			background-color: @glb-orange-dark;
 		}
-		.yellow-base & {
+		.color-F7DA46 & {
 			background-color: @glb-yellow-dark;
 		}
-		.green-base & {
+		.color-C5E641 & {
 			background-color: @glb-green-dark;
 		}
-		.blue-base & {
+		.color-47A6D4 & {
 			background-color: @glb-blue-dark;
 		}
-		.lilac-base & {
+		.color-DFA5F0 & {
 			background-color: @glb-lilac;
 		}
 	}
@@ -91,19 +120,19 @@
 		right: 3%;
 		z-index: 3;
 
-		.orange-base & {
+		.color-FFA340 & {
 			background-color: @glb-orange;
 		}
-		.yellow-base & {
+		.color-F7DA46 & {
 			background-color: @glb-yellow;
 		}
-		.green-base & {
+		.color-C5E641 & {
 			background-color: @glb-green;
 		}
-		.blue-base & {
+		.color-47A6D4 & {
 			background-color: @glb-blue;
 		}
-		.lilac-base & {
+		.color-DFA5F0 & {
 			background-color: @glb-lilac;
 		}
 
@@ -317,42 +346,42 @@
 		text-align: right;
 		text-transform: uppercase;
 
-		.orange-base & {
+		.color-FFA340 & {
 			border-color: @glb-orange;
 			color: @glb-orange;
 		}
-		.yellow-base & {
+		.color-F7DA46 & {
 			border-color: @glb-yellow;
 			color: @glb-yellow;
 		}
-		.green-base & {
+		.color-C5E641 & {
 			border-color: @glb-green;
 			color: @glb-green;
 		}
-		.blue-base & {
+		.color-47A6D4 & {
 			border-color: @glb-blue;
 			color: @glb-blue;
 		}
-		.lilac-base & {
+		.color-DFA5F0 & {
 			border-color: @glb-lilac;
 			color: @glb-lilac;
 		}
 	}
 
 	a {
-		.orange-base & {
+		.color-FFA340 & {
 			color: @glb-orange;
 		}
-		.yellow-base & {
+		.color-F7DA46 & {
 			color: @glb-yellow;
 		}
-		.green-base & {
+		.color-C5E641 & {
 			color: @glb-green;
 		}
-		.blue-base & {
+		.color-47A6D4 & {
 			color: @glb-blue;
 		}
-		.lilac-base & {
+		.color-DFA5F0 & {
 			color: @glb-lilac;
 		}
 	}
@@ -370,6 +399,8 @@
 
 	.image-wrapper {
 		display: inline-block;
+		float: right;
+		vertical-align: top;
 		width: 32.9%;
 	}
 }
@@ -505,19 +536,19 @@
 	border-bottom-style: solid;
 	border-bottom-width: 2px;
 
-	.orange-base & {
+	.color-FFA340 & {
 		border-color: @glb-orange;
 	}
-	.yellow-base & {
+	.color-F7DA46 & {
 		border-color: @glb-yellow;
 	}
-	.green-base & {
+	.color-C5E641 & {
 		border-color: @glb-green;
 	}
-	.blue-base & {
+	.color-47A6D4 & {
 		border-color: @glb-blue;
 	}
-	.lilac-base & {
+	.color-DFA5F0 & {
 		border-color: @glb-lilac;
 	}
 
@@ -530,7 +561,7 @@
 		font-size: 20px;
 		line-height: 20px;
 
-		.orange-base & {
+		.color-FFA340 & {
 			color: @glb-orange;
 		}
 	}
@@ -581,19 +612,19 @@
 	border-top-width: 2px;
 	text-align: left;
 
-	.orange-base & {
+	.color-FFA340 & {
 		border-color: @glb-orange;
 	}
-	.yellow-base & {
+	.color-F7DA46 & {
 		border-color: @glb-yellow;
 	}
-	.green-base & {
+	.color-C5E641 & {
 		border-color: @glb-green;
 	}
-	.blue-base & {
+	.color-47A6D4 & {
 		border-color: @glb-blue;
 	}
-	.lilac-base & {
+	.color-DFA5F0 & {
 		border-color: @glb-lilac;
 	}
 
@@ -601,19 +632,19 @@
 		text-transform: uppercase;
 
 		span {
-			.orange-base & {
+			.color-FFA340 & {
 				color: @glb-orange;
 			}
-			.yellow-base & {
+			.color-F7DA46 & {
 				color: @glb-yellow;
 			}
-			.green-base & {
+			.color-C5E641 & {
 				color: @glb-green;
 			}
-			.blue-base & {
+			.color-47A6D4 & {
 				color: @glb-blue;
 			}
-			.lilac-base & {
+			.color-DFA5F0 & {
 				color: @glb-lilac;
 			}
 		}

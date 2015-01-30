@@ -29,7 +29,7 @@
     </section>
 
     <!--======== Sumate ========-->
-    <section id="row4" class="glb-section hero contact" style="background-image: url('<?php print path_to_theme(); ?>/assets/bkg_contact.png');">
+    <section id="row4" class="glb-section hero contact" style="background-image: url('<?php print path_to_theme(); ?>/assets/bkg_jobs_01.jpg');">
         <?php print $content['row4']; ?>
     </section>
 
