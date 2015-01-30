@@ -1,7 +1,4 @@
-var search = angular.module('search', []);
-
 jQuery(document).ready(function($) {
-    angular.bootstrap($('#search-positions'), ['search']);
 
     $('.cities li a').click(function() {
         $('#filter-results li a').fadeOut();

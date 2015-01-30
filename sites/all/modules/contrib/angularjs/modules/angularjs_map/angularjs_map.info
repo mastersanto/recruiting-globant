@@ -68,8 +68,15 @@ features_exclude[field][node-earthquake-field_location] = node-earthquake-field_
 project path = sites/all/modules/custom/angularjs/modules
 
 ; Information added by drupal.org packaging script on 2013-10-26
-version = "7.x-1.3"
+version = "7.x-1.2"
 core = "7.x"
 project = "angularjs"
-datestamp = "1382813130"
+datestamp = "1382764231"
+
+
+; Information added by Drupal.org packaging script on 2014-12-04
+version = "7.x-1.4"
+core = "7.x"
+project = "angularjs"
+datestamp = "1417732739"
 
