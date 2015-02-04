@@ -3,74 +3,80 @@
 /**
  * Implements hook_block_info()
  */
-function globant_studios_block_info() {
-  $blocks = array();
+function globant_studios_block_info()
+{
+    $blocks = array();
 
-  $blocks['globant_studios'] = array(
-    'info' => t('Studios in Globant')
-  );
+    $blocks['globant_studios'] = array(
+        'info' => t('Studios in Globant')
+    );
 
-  return $blocks;
+    return $blocks;
 }
 
 /**
  * Implements hook_block_view()
  */
-function globant_studios_block_view($delta = '') {
-  $block = array();
+function globant_studios_block_view($delta = '')
+{
+    $block = array();
 
-  switch($delta) {
-    case 'globant_studios':
-        $content = array();
-        $nodes = globant_studios_get_nodequeue_content('videos');
+    switch ($delta) {
+        case 'globant_studios':
+            $content = array();
+            $nodes = globant_studios_get_nodequeue_content('videos');
 
 
-        foreach ($nodes as $key => $node) {
-          $content['nodes'][$key]['title'] = $node->title;
-          $content['nodes'][$key]['video'] = theme('media_youtube_video', array(
-            'uri' => $node->field_video_youtube[LANGUAGE_NONE][0]['uri'],
-            'options' => array(
-              'height'  =>  '300',
-              'width'   =>  '500',
-              'enablejsapi'  =>  1
-            )
-          ));
-          $content['nodes'][$key]['thumb'] = theme('image', array(
-            'path'  =>  $node->field_miniatura[LANGUAGE_NONE][0]['uri'],
-          ));
-          $content['nodes'][$key]['color'] = str_replace('#', '', $node->field_color[LANGUAGE_NONE][0]['rgb']);
-        }
+            foreach ($nodes as $key => $node) {
+                $content['nodes'][$key]['title'] = $node->title;
+                $content['nodes'][$key]['body'] = $node->body[LANGUAGE_NONE][0]['value'];
+                $content['nodes'][$key]['video'] = theme('media_youtube_video', array(
+                    'uri'     => $node->field_video_youtube[LANGUAGE_NONE][0]['uri'],
+                    'options' => array(
+                        'height'      => '300',
+                        'width'       => '500',
+                        'enablejsapi' => 1
+                    )
+                ));
+                $content['nodes'][$key]['thumb'] = theme('image', array(
+                    'path' => $node->field_miniatura[LANGUAGE_NONE][0]['uri'],
+                ));
+                $content['nodes'][$key]['color'] = str_replace('#', '', $node->field_color[LANGUAGE_NONE][0]['rgb']);
+            }
 
-        if (!empty($content)) {
-          $block ['content'] = theme('globant_studios_block', $content);
-        }
+            if (!empty($content)) {
+                $block ['content'] = theme('globant_studios_block', $content);
+            }
 
-        break;
-  }
+            break;
+    }
 
-  return $block;
+    return $block;
 }
 
 /**
  * Implements hook_theme()
  */
-function globant_studios_theme() {
-  return array(
-    'globant_studios_block' => array(
-      'variables' =>  array(),
-      'template'  =>  'templates/globant-studios-block'
-    )
-  );
+function globant_studios_theme()
+{
+    return array(
+        'globant_studios_block' => array(
+            'variables' => array(),
+            'template'  => 'templates/globant-studios-block'
+        )
+    );
 }
+
 /**
  * Return nodes from nodequeue by its machineame
  * @param $nodequeue_name Nodequeue machine name
  * @return array
  */
-function globant_studios_get_nodequeue_content($nodequeue_name) {
+function globant_studios_get_nodequeue_content($nodequeue_name)
+{
 
-  $nodequeue = nodequeue_load_queue_by_name($nodequeue_name);
-  $nodes = nodequeue_load_nodes($nodequeue->qid, false, 0, false);
+    $nodequeue = nodequeue_load_queue_by_name($nodequeue_name);
+    $nodes = nodequeue_load_nodes($nodequeue->qid, false, 0, false);
 
-  return $nodes;
+    return $nodes;
 }

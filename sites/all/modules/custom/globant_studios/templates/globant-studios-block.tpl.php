@@ -41,6 +41,7 @@
         </div>
         <div class="modal-body">
           <?php print $node['video'] ?>
+          <?php print $node['body'] ?>
         </div>
       </div>
     </div>
