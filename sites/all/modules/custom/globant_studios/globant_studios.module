@@ -28,7 +28,7 @@ function globant_studios_block_view($delta = '') {
         foreach ($nodes as $key => $node) {
           $content['nodes'][$key]['title'] = $node->title;
           $content['nodes'][$key]['video'] = theme('media_youtube_video', array(
-            'uri' => $nodes[0]->field_video_youtube[LANGUAGE_NONE][0]['uri'],
+            'uri' => $node->field_video_youtube[LANGUAGE_NONE][0]['uri'],
             'options' => array(
               'height'  =>  '300',
               'width'   =>  '500',
@@ -40,15 +40,6 @@ function globant_studios_block_view($delta = '') {
           ));
           $content['nodes'][$key]['color'] = str_replace('#', '', $node->field_color[LANGUAGE_NONE][0]['rgb']);
         }
-        // Render thumbnail
-        // Load the file
-        /*$file = file_load($nodes[0]->field_video_youtube[LANGUAGE_NONE][0]['fid']);
-        // Set up the settings array with your image style
-        $display['settings'] = array('image_style' => 'video_thumb_230_200');
-        // Get the render array for the thumbnail image
-        $image_render_array = media_youtube_file_formatter_image_view($file, $display, LANGUAGE_NONE);
-        // Render it
-        $content[0]['thumb'] = render($image_render_array);*/
 
         if (!empty($content)) {
           $block ['content'] = theme('globant_studios_block', $content);
