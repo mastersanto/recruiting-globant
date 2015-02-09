@@ -1,5 +1,5 @@
-<h2 class="section-title">Testimonios</h2>
-<p class="section-subtitle">Nuestros Globers<br> te cuentan más acerca de Globant.</p>
+<h2 class="section-title"><?php print t('Testimonios') ?></h2>
+<p class="section-subtitle"><?php print t('Nuestros Globers te cuentan cómo es trabajar y hacer carrera en Globant.') ?></p>
 <?php foreach ($variables['nodes'] as $key => $node): ?>
   <?php if($key == 0 || $key == 6): ?>
     <div class="row">
