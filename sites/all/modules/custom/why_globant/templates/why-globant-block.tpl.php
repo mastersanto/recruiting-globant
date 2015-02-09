@@ -1,4 +1,5 @@
 <div class="panel-group" id="accordion">
+    <h2 class="section-title"><?php print t('¿Por qué Globant?'); ?></h2>
     <?php foreach($variables['nodes'] as $key => $node): ?>
         <div class="panel panel-default clients-panel <?php print $node['color'] . ' ' . $node['field_color'] ?> ">
           <div id="collapse<?php print $key + 1 ?>" class="panel-collapse collapse <?php if (($key + 1) == 1) print 'in'; ?>">
