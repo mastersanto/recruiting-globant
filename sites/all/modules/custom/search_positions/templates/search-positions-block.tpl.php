@@ -15,17 +15,6 @@
         <li role="presentation" class="divider"></li>
       </ul>
     </div>
-    <div class="dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
-        Estudio
-        <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu positions" role="menu" aria-labelledby="dropdownMenu2">
-        <?php foreach($variables['studios'] as $studio) : ?>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="javascript:void(0)" tid="<?php print $studio->tid ?>"><?php print $studio->name ?></a></li>
-        <?php endforeach; ?>
-      </ul>
-    </div>
   </div>
   <ul id="filter-results">
     <?php foreach($variables['positions'] as $position) : ?>
