@@ -5,7 +5,7 @@
           <div id="collapse<?php print $key + 1 ?>" class="panel-collapse collapse <?php if (($key + 1) == 1) print 'in'; ?>">
             <div class="panel-body container">
                 <?php print $node['bk_image'] ?>
-                <p class="eyebrow"><?php print $node['title'] ?></p>
+                <p class="eyebrow"><?php print '#' . ($key+1) . ' ' . $node['title'] ?></p>
                 <div class="panel-column-right">
                   <h3><?php print $node['subtitulo'] ?></h3>
                   <?php print $node['description'][LANGUAGE_NONE][0]['safe_value'] ?>
@@ -29,7 +29,7 @@
             <h4 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php print $key + 1 ?>">
                 <span class="container">
-                  <?php print $node['title'] ?>
+                  <?php print '#' . ($key+1) . ' ' . $node['title'] ?>
                 </span>
               </a>
             </h4>
