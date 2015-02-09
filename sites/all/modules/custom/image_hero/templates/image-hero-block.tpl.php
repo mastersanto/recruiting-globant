@@ -1,4 +1,4 @@
+<h1 class="page-title"><span><?php print t('En Globant hace carrera'); ?></span></h1>
 <div class="hero-container">
-  <h1 class="page-title"><?php print t('En Globant hace carrera'); ?></h1>
   <?php print $variables['image']; ?>
 </div>
