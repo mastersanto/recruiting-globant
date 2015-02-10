@@ -4,8 +4,8 @@
         <div class="panel panel-default clients-panel <?php print $node['color'] . ' ' . $node['field_color'] ?> ">
           <div class="panel-heading">
             <h4 class="panel-title accordion-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php print $key + 1 ?>">
-                <span class="container">
+              <a class="accordion-title-link <?php if (($key + 1) != 1) print 'collapsed'; ?>" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php print $key + 1 ?>">
+                <span class="accordion-title-container">
                   <span class="accordion-number"><?php print '#' . ($key+1) ?></span>
                   <?php print $node['title'] ?>
                 </span>

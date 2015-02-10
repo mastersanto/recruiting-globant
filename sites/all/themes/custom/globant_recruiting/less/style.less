@@ -97,7 +97,7 @@ color-FFA340
 	text-align: center;
 	vertical-align: bottom;
 	z-index: 1;
-
+	/* // Images labels
 	&:before {
 		bottom: 9px;
 		content: '';
@@ -124,7 +124,7 @@ color-FFA340
 		.color-47A6D4 & {
 			background-color: @glb-blue-dark;
 		}
-	}
+	}*/
 
 	.image-display {
 		max-width: 90%;
@@ -133,16 +133,11 @@ color-FFA340
 	}
 
 	.image-caption {
-		bottom: 18px;
-		color: white;
-		font-size: 12px;
-		left: 3%;
-		line-height: 16px;
-		padding: 7px 15px;
-		position: absolute;
-		right: 3%;
-		z-index: 3;
-
+		color: @glb-gray;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 10px 15px 0;
+		/*
 		.color-FFA340 & {
 			background-color: @glb-orange;
 		}
@@ -164,7 +159,7 @@ color-FFA340
 
 		.career-panel & {
 			text-transform: uppercase;
-		}
+		}*/
 	}
 }
 
@@ -212,19 +207,20 @@ color-FFA340
 	.section-title,
 	.section-subtitle {
 		text-align: center;
-		text-transform:uppercase;
 	}
 
 	.section-title {
 		font-size: 51px;
-		margin-bottom: 28px;
+		margin-bottom: 33px;
 		margin-top: 100px;
+		text-transform: uppercase;
 	}
 
 	.section-subtitle {
-		font-size: 32px;
-		line-height: 40px;
-		margin-bottom: 70px;
+		font-size: 36px;
+		line-height: 42px;
+		margin: 0 auto 63px;
+		width: 60%;
 	}
 
 	&#row3 {
@@ -261,23 +257,21 @@ color-FFA340
 		border: 0 none;
 		border-radius: 0;
 		margin-top: 0;
-
+		/*
 		.panel-collapse {
 			&.in + .panel-heading {
 				display: none;
 			}
-		}
-
-		.accordion-number {
-			display: inline-block;
-			font-size: 40px;
-			font-weight: bold;
-		}
+		}*/
 
 		.panel-heading {
 			background: none;
 			border-radius: 0;
-			padding: 0;			
+			padding: 0;
+		}
+
+		.panel-body {
+			border-top: 0 none;
 		}
 		/*
 		.collapse-in {
@@ -290,43 +284,80 @@ color-FFA340
 
 .accordion-title {
 	text-align: left;
+}
 
-	> a {
-		color: white;
-		display: block;
-		font-size: 30px;
-		height: 60px;
-		line-height: 60px;
-		padding: 0 15px;
+.accordion-title-link {
+	background-color: @glb-gray;
+	border-bottom: 1px solid white;
+	display: block;
+	font-size: 30px;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 15px;
+	text-decoration: none !important;
 
-		&:hover {
-			color: @glb-gray;
-			text-decoration: none;
-		}
-
-		span {
-			display: block;
-		}
-		
-		.color-FFA340 & {
-			background-color: @glb-orange;
-		}
-		.color-FEBE10 & {
-			background-color: @glb-yellow;
-		}
-		.color-C5E641 & {
-			background-color: @glb-green;
-		}
-		.color-ECC008C & {
-			background-color: @glb-magenta;
-		}
-		.color-9A9BCD & {
-			background-color: @glb-lilac;
-		}
-		.color-47A6D4 & {
-			background-color: @glb-blue;
+	&:hover {
+		//color: @glb-gray;
+		//text-decoration: none;
+		opacity: .8;
+	}
+	
+	&.collapsed {
+		.accordion-title-container {
+			&:before {
+				border-color: transparent transparent transparent white;
+				margin-top: -10px;
+				border-width: 10px 0 10px 9px;
+			}
 		}
 	}
+
+	.accordion-title-container {
+		color: white;
+		display: block;
+		position: relative;
+
+		&:before {
+			border-style: solid;
+			border-color: white transparent transparent transparent;
+			border-width: 9px 10px 0 10px;
+			content: '';
+			display: block;
+			height: 0;
+			margin-top: -5px;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			width: 0;
+		}
+	}
+	
+	.color-FFA340 & {
+		background-color: @glb-orange;
+	}
+	.color-FEBE10 & {
+		background-color: @glb-yellow;
+	}
+	.color-C5E641 & {
+		background-color: @glb-green;
+	}
+	.color-ECC008C & {
+		background-color: @glb-magenta;
+	}
+	.color-9A9BCD & {
+		background-color: @glb-lilac;
+	}
+	.color-47A6D4 & {
+		background-color: @glb-blue;
+	}
+}
+
+.accordion-number {
+	color: white;
+	display: inline-block;
+	font-size: 40px;
+	font-weight: bold;
+	margin-right: 8px;
 }
 
 // Pane Content
@@ -392,6 +423,7 @@ color-FFA340
 	h3.accordion-subtitle {
 		color: @glb-gray;
 		font-size: 24px;
+		margin-bottom: 20px;
 		/*
 		border-bottom-style: solid;
 		border-bottom-width: 2px;
@@ -450,8 +482,8 @@ color-FFA340
 	}
 
 	p {
-		font-size: 12px;
-		margin-bottom: 10px;
+		font-size: 14px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -614,6 +646,9 @@ color-FFA340
 		position: relative;
 
 		.studio-content {
+			border-color: white;
+			border-style: solid;
+			border-width: 1px 1px 0 0;
 			bottom: 0;
 			left: 0;
 			line-height: 200px;
@@ -636,7 +671,8 @@ color-FFA340
 				background-color: rgba(0, 0, 0, 0.4);
 				bottom: 0;
 				color: white;
-				font-size: 19px;
+				font-style: italic;
+				font-size: 24px;
 				left: 0;
 				line-height: 25px;
 				opacity: 0;
@@ -644,7 +680,7 @@ color-FFA340
 				position: absolute;
 				right: 0;
 				top: 0;
-				text-transform: uppercase;
+				text-align: center;
 				transition: opacity .25s ease-in-out;
 
 				.studio-name {
@@ -956,6 +992,17 @@ color-FFA340
 }
 
 @media screen and (max-width: 991px) {
+
+// Collapsible
+//-------------------------
+	.accordion-number {
+		font-size: 30px;
+	}
+
+	.accordion-title-link {
+		font-size: 20px;
+	}
+
 // Studios
 //-------------------------
 	.studios {
@@ -1003,7 +1050,31 @@ color-FFA340
 	}
 }
 
+@media screen and (max-width: 767px) {
+
+// Collapsible
+//-------------------------
+	.accordion-number {
+		font-size: 26px;
+	}
+
+	.accordion-title-link {
+		font-size: 18px;
+	}
+}
+
 @media screen and (max-width: 639px) {
+
+// Collapsible
+//-------------------------
+	.accordion-number {
+		font-size: 24px;
+	}
+
+	.accordion-title-link {
+		font-size: 15px;
+	}
+
 // Footer
 //---------------------------------------------
 	.footer {
@@ -1014,5 +1085,18 @@ color-FFA340
 		ul {
 			padding: 0;
 		}
+	}
+}
+
+@media screen and (max-width: 479px) {
+
+// Collapsible
+//-------------------------
+	.accordion-number {
+		font-size: 18px;
+	}
+
+	.accordion-title-link {
+		font-size: 12px;
 	}
 }
