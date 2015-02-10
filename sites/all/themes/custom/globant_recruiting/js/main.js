@@ -26,7 +26,7 @@ GLB.accordions = {
 		$accordions.on("shown.bs.collapse", function () {
 		    $('html, body').animate({
 		    	// Adding Header's height 70px 
-		        scrollTop: $(this).offset().top - 70
+		        scrollTop: $(this).offset().top - 120
 		    }, 500);
 		});
 	}

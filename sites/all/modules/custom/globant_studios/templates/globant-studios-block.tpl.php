@@ -41,7 +41,9 @@
         </div>
         <div class="modal-body">
           <?php print $node['video'] ?>
-          <?php print $node['body'] ?>
+          <div class="modal-video-description">
+            <?php print $node['body'] ?>
+          </div>
         </div>
       </div>
     </div>
