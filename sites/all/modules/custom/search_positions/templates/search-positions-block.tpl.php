@@ -18,7 +18,7 @@
   </div>
   <ul id="filter-results">
     <?php foreach($variables['positions'] as $position) : ?>
-      <li><a class="icon-position" city="<?php print $position->field_ciudad[LANGUAGE_NONE][0]['tid'] ?>" studio="<?php print $position->field_estudio[LANGUAGE_NONE][0]['tid'] ?>" href="<?php print $position->field_link_globant[LANGUAGE_NONE][0]['url'] ?>" target="_blank"><strong><?php print $position->title?><strong> Buenos Aires</a></li>
+      <li><a class="icon-position" city="<?php print $position->cities ?>" href="<?php print $position->field_link_globant[LANGUAGE_NONE][0]['url'] ?>" target="_blank"><strong><?php print $position->title?><strong></a></li>
     <?php endforeach; ?>
   </ul>
 </div>

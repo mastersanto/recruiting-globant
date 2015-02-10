@@ -33,6 +33,14 @@ function search_positions_block_view($delta = '') {
             $studios = entity_load('taxonomy_term', FALSE, array('vid' => $vocabulary->vid));
             // Get available positions
             $positions = node_load_multiple(array(), array('type' => 'posicion', 'status' => 1));
+            // Get multiples location for one position
+            foreach ($positions as $key => $position) {
+                $location = array();
+                foreach ($position->field_ciudad[LANGUAGE_NONE] as $city) {
+                    $location[] = $city['tid'];
+                }
+                $positions[$key]->cities = implode(' ', $location);
+            }
 
             $data = array(
               'cities'    =>  $cities,
