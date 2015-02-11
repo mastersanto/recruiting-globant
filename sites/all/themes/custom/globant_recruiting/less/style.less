@@ -1080,6 +1080,10 @@ color-EC008C
 
 @media screen and (max-width: 991px) {
 
+	.page-title span {
+		font-size: 85px;
+	}
+
 // Collapsible
 //-------------------------
 	.accordion-number {
@@ -1106,13 +1110,16 @@ color-EC008C
 			}
 
 			.studio-content {
+				border: 0 none;
 				line-height: 120px;
 				position: absolute;
 
 				.thumbnail-wrapper {
 					display: inline-block;
 					float: left;
+					height: 120px;
 					overflow: hidden;
+					position: relative;
 					width: 20%;
 				}
 
@@ -1193,6 +1200,30 @@ color-EC008C
 
 @media screen and (max-width: 479px) {
 
+	.page-title {
+		line-height: 63px;
+
+		span {
+			font-size: 46px;
+			line-height: 32px;
+		}
+	}
+
+	.glb-section {
+		.section-title {
+			font-size: 32px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 90%;
+		}
+
+		.section-subtitle {
+			font-size: 20px;
+			line-height: 28px;
+			width: 90%;
+		}
+	}
+
 // Collapsible
 //-------------------------
 	.accordion-number {
@@ -1201,5 +1232,40 @@ color-EC008C
 
 	.accordion-title-link {
 		font-size: 12px;
+	}
+
+	.clients-panel.studios-panel .clients-list li {
+		width: 24%
+	}
+
+// Studios
+//-------------------------
+	.studios .studio .studio-content .studio-overlay {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+// Positions
+//-------------------------	
+	#filters {
+		ul.dropdown-menu {
+		    -webkit-columns: 2;
+		    -moz-columns: 2;
+		    columns: 2;
+		    left: -128px;
+		    width: 300px;
+		}
+	}
+
+	#filter-results {
+		list-style: none;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+
+		li {
+			float: none;
+			width: 100%;
+		}
 	}
 }
