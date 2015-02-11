@@ -1,7 +1,9 @@
 <div class="panel-group" id="accordion">
     <h2 class="section-title"><?php print t('¿Por qué Globant?'); ?></h2>
     <?php foreach($variables['nodes'] as $key => $node): ?>
-        <div class="panel panel-default clients-panel <?php print $node['color'] . ' ' . $node['field_color'] ?> ">
+        <div class="panel panel-default clients-panel
+          <?php print $node['color'] . ' ' . $node['field_color'] ?> 
+          <?php if (($key + 1) == 3) print 'studios-panel'; ?>">
           <div class="panel-heading">
             <h4 class="panel-title accordion-title">
               <a class="accordion-title-link <?php if (($key + 1) != 1) print 'collapsed'; ?>" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php print $key + 1 ?>">
