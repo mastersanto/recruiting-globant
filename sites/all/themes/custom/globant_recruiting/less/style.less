@@ -608,6 +608,10 @@ color-FFA340
 		min-height: 480px;
 	}
 
+	.row-3-images {
+		display: none;
+	}
+
 	.clients-list {
 		float: right;
 		list-style: none;
@@ -623,10 +627,43 @@ color-FFA340
 			margin: 25px 0;
 			text-align: center;
 			vertical-align: bottom;
-			width: 32%;
+			width: 24%;
 
 			img {
 				max-width: 100%;
+			}
+		}
+	}
+	
+	&:nth-child(3) {
+
+		.clients-list {
+			background-color: blue;
+			display: block;
+			float: none;
+
+			li {
+				width: 24%;
+			}
+		}
+	}
+}
+
+#accordion {
+	> div:nth-child(1) {
+		color: red !important;
+	}
+
+	> div:nth-child(3) {
+		color: blue !important;
+
+		.clients-list {
+			background-color: blue;
+			display: block;
+			float: none;
+
+			li {
+				width: 24%;
 			}
 		}
 	}
