@@ -27,7 +27,8 @@ function globant_studios_block_view($delta = '')
             $nodes = globant_studios_get_nodequeue_content('videos');
 
             foreach ($nodes as $key => $node) {
-                $content['nodes'][$key]['title'] = explode('-', $node->title);
+                $content['nodes'][$key]['title'] = $node->title;
+                $content['nodes'][$key]['subtitulo'] = $node->field_subtitulo[LANGUAGE_NONE][0]['value'];
                 $content['nodes'][$key]['body'] = $node->body[LANGUAGE_NONE][0]['value'];
                 $content['nodes'][$key]['video'] = theme('media_youtube_video', array(
                     'uri'     => $node->field_video_youtube[LANGUAGE_NONE][0]['uri'],
