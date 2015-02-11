@@ -13,7 +13,7 @@
 
 /* COLORS in Drupal
 blue
-color-EC008C
+color-47A6D4
 green
 color-C5E641
 lilac
@@ -22,6 +22,8 @@ yellow
 color-FEBE10
 orange
 color-FFA340
+magenta
+color-EC008C
 */
 
 // Admin
@@ -259,12 +261,6 @@ color-FFA340
 		border: 0 none;
 		border-radius: 0;
 		margin-top: 0;
-		/*
-		.panel-collapse {
-			&.in + .panel-heading {
-				display: none;
-			}
-		}*/
 
 		.panel-heading {
 			background: none;
@@ -276,12 +272,6 @@ color-FFA340
 			border-top: 0 none;
 			min-height: 520px;
 		}
-		/*
-		.collapse-in {
-			+ .panel-heading {
-				display: none;
-			}
-		}	*/	
 	}
 }
 
@@ -300,8 +290,6 @@ color-FFA340
 	text-decoration: none !important;
 
 	&:hover {
-		//color: @glb-gray;
-		//text-decoration: none;
 		opacity: .8;
 	}
 	
@@ -750,9 +738,7 @@ color-FFA340
 	box-shadow: none;
 }
 
-.modal-header {/*
-	border-bottom-style: solid;
-	border-bottom-width: 2px;*/
+.modal-header {
 	border: 0 none;
 	padding: 0;
 
@@ -935,14 +921,14 @@ color-FFA340
 		ul.dropdown-menu {
 			left: -250px;
 			width: 650px;
+		    -webkit-columns: 4;
+		    columns: 4;
 
-			li {/*
-			    -webkit-column-count: 4;
-			    -moz-column-count: 4;
-			    column-count: 4;*/
+			li {
+			    /*
 				display: inline-block;
 				vertical-align: bottom;
-				width: 24%;
+				width: 24%;*/
 
 				a {
 				}
