@@ -217,6 +217,7 @@ color-FFA340
 	}
 
 	.section-subtitle {
+		color: @glb-gray-less;
 		font-size: 36px;
 		line-height: 42px;
 		margin: 0 auto 63px;
@@ -933,6 +934,7 @@ color-FFA340
 	text-align: center;
 
 	.section-subtitle {
+		color: white;
 		margin-bottom: 25px;
 	}
 
@@ -971,18 +973,27 @@ color-FFA340
 // Footer
 //---------------------------------------------
 .footer {
-	background-color: @glb-blue;
-	border-top: none 0;
-	color: white;
+	background-color: white;
+	border-top: 0 none;
 	margin: 0;
-	padding: 20px;
+	padding: 0 20px;
 	position: relative;
 	text-align: center;
 	z-index: 1;
 
+	.region-footer {
+		border-top: 1px dotted @glb-gray;
+		padding: 20px 0;
+	}
+
+	.block-title,
+	ul {
+		margin-bottom: 0;
+	}
+
 	.block-title,
 	ul li {
-		color: white;
+		color: @glb-gray-less;
 		font-size: 12px;
 		font-weight: normal;
 		line-height: 12px;
@@ -990,20 +1001,24 @@ color-FFA340
 
 	.block-title {
 		display: inline;
+		float: right;
 	}
 
 	ul {
 		display: inline;
+		float: left;
 		list-style: none;
+		padding-left: 0;
 
 		li {
 			display: inline;
-			margin: 0 10px;
+			margin-right: 20px;
 
 			a {
-				color: white !important;
+				color: @glb-gray-less !important;
 
 				&:hover {
+					color: @glb-gray !important;
 					text-decoration: underline !important;
 				}
 			}
