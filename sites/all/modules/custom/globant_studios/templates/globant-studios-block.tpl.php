@@ -39,7 +39,7 @@
           <div class="modal-column-left">
             <h4 class="modal-title" id="myModalLabel">
               <?php print $node['title'] ?>
-              <?php if($node['subtitulo']): ?><span class="video-author"><?php print $node['subtitulo'] ?></span><?php endif; ?>
+              <?php if($node['subtitulo']): ?><br><span class="video-author"><?php print $node['subtitulo'] ?></span><?php endif; ?>
             </h4>
           </div>
         </div>
