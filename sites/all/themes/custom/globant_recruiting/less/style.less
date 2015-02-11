@@ -573,6 +573,11 @@ color-FFA340
 // Location
 //-------------------------
 .location {
+	.panel:last-child {
+		.row-3-images {
+			display: none;
+		}		
+	}
 }
 
 // min-height Section calculated from .bkg-image = imageHeight + (topPosition * 2)
@@ -602,19 +607,21 @@ color-FFA340
 	}
 
 	.clients-list {
-		clear: both;
+		float: right;
 		list-style: none;
 		padding: 0;
 		position: relative;
+		width: 50%;
 		z-index: 1;
 
 		li {
 			box-sizing: border-box;
 			display: inline-block;
-			padding: 0 5px;
+			//padding: 0 5px;
+			margin: 25px 0;
 			text-align: center;
 			vertical-align: bottom;
-			width: 16%;
+			width: 33%;
 
 			img {
 				max-width: 100%;
@@ -672,6 +679,7 @@ color-FFA340
 				background-color: rgba(0, 0, 0, 0.4);
 				bottom: 0;
 				color: white;
+				font-family: arial;
 				font-style: italic;
 				font-size: 24px;
 				left: 0;
@@ -689,6 +697,15 @@ color-FFA340
 					display: block;
 					font-size: 16px;
 					line-height: 16px;
+				}
+
+				.video-author {
+					display: block;
+					font-family: Roboto;
+					font-size: 12px;
+					font-style: normal;
+					line-height: 16px;
+					text-transform: uppercase;
 				}
 			}
 
@@ -870,6 +887,10 @@ color-FFA340
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: white;
+
+	.section-subtitle {
+		color: white;
+	}
 }
 
 	// Filters
@@ -887,11 +908,19 @@ color-FFA340
 			left: -250px;
 			width: 650px;
 
-			li {
+			li {/*
+			    -webkit-column-count: 4;
+			    -moz-column-count: 4;
+			    column-count: 4;*/
 				display: inline-block;
 				vertical-align: bottom;
+				width: 24%;
 
 				a {
+				}
+
+				&.divider {
+					display: none;
 				}
 			}
 		}
@@ -912,7 +941,7 @@ color-FFA340
 			float: left;
 			width: 25%;
 			a {
-				background-color: rgba(255, 255, 255, 0.2);
+				background-color: rgba(255, 255, 255, 0.4);
 				border: 1px solid white;
 				color: white;
 				display: block;
@@ -934,7 +963,6 @@ color-FFA340
 	text-align: center;
 
 	.section-subtitle {
-		color: white;
 		margin-bottom: 25px;
 	}
 
@@ -1079,6 +1107,9 @@ color-FFA340
 					box-sizing: border-box;
 					color: @glb-gray;
 					display: inline-block;
+					/*
+					font-family: arial;
+					font-size: 24px;*/
 					opacity: 1;
 					position: relative;
 					width: 80%;
