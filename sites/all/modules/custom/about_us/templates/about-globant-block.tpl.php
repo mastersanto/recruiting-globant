@@ -1,5 +1,5 @@
 <div class="container">
-  <h2 class="section-title"><?php print t('Conócenos'); ?></h2>
+  <h2 class="section-title"><?php print t('Conocenos'); ?></h2>
   <p class="section-subtitle"><?php print $variables['title'] ?></p>
 
   <?php print $variables['video'] ?>
