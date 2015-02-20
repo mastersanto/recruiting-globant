@@ -4,6 +4,20 @@
 
   <?php print $variables['video'] ?>
 
+  <p class="more-globant">Si querés saber más sobre Globant, escribinos a <a href="mailto:info@globant.com">info@globant.com</a> o visitanos en:</p>
+  <ul class="social-media">
+    <li><a class="social-facebook" href="https://www.facebook.com/Globant" target="_blank">Facebook</a></li>
+    <li><a class="social-twitter" href="http://www.twitter.com/globant" target="_blank">Twitter</a></li>
+    <li><a class="social-youtube" href="http://www.youtube.com/Globant" target="_blank">YouTube</a></li>
+    <li><a class="social-linkedin" href="http://www.linkedin.com/company/globant" target="_blank">LinkedIn</a></li>
+    <li><a class="social-pinterest" href="http://www.pinterest.com/globant/" target="_blank">Pinterest</a></li>
+    <li><a class="social-foursquare" href="https://foursquare.com/globant" target="_blank">FourSquare</a></li>
+    <li><a class="social-googleplus" href="https://plus.google.com/+GlobantPlus/" target="_blank">Google Plus</a></li>
+    <li><a class="social-instagram" href="http://instagram.com/globantpics" target="_blank">Pinterest</a></li>
+    <li><a class="social-slideshare" class="social-face" href="http://www.slideshare.net/globant/" target="_blank">SlideShare</a></li>
+    <li><a class="social-globant" href="http://www.globant.com/" target="_blank">Globant</a></li>
+  </ul>
+
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
       <?php foreach($variables['statements'] as $key => $statement): ?>
