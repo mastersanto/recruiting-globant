@@ -81,6 +81,7 @@ function why_globant_block_view($delta = '') {
                     'logos'           =>  $logos,
                     'color'           =>  $colors[$key],
                     'field_color'     =>  'color-' . str_replace('#', '', strtoupper($node->field_color[LANGUAGE_NONE][0]['rgb'])),
+                    'layout'          =>  $node->field_layout[LANGUAGE_NONE][0]['value'],
                 );
             }
 

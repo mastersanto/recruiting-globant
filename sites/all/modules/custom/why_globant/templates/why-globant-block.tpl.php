@@ -2,7 +2,7 @@
     <h2 class="section-title"><?php print t('¿Por qué Globant?'); ?></h2>
     <?php foreach($variables['nodes'] as $key => $node): ?>
         <div class="panel panel-default clients-panel
-          <?php print $node['color'] . ' ' . $node['field_color'] ?> 
+          <?php print $node['color'] . ' ' . $node['field_color'] . ' ' . $node['layout'] ?>
           <?php if (($key + 1) == 3) print 'studios-panel'; ?>">
           <div class="panel-heading">
             <h4 class="panel-title accordion-title">
