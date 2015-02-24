@@ -20,12 +20,12 @@
       <?php print $content['row1']; ?>
     </section>
 
-    <section id="row2" class="glb-section location">
-      <?php print $content['row2']; ?>
-    </section>
-
     <section id="row3" class="glb-section studios">
       <?php print $content['row3']; ?>
+    </section>
+
+    <section id="row2" class="glb-section location">
+      <?php print $content['row2']; ?>
     </section>
 
     <!--======== Sumate ========-->
