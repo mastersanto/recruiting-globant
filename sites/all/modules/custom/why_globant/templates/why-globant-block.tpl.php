@@ -6,7 +6,7 @@
           <?php if (($key + 1) == 3) print 'studios-panel'; ?>">
           <div class="panel-heading">
             <h4 class="panel-title accordion-title">
-              <a class="accordion-title-link <?php if (($key + 1) != 1) print 'collapsed'; ?>" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php print $key + 1 ?>">
+              <a class="accordion-title-link collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php print $key + 1 ?>">
                 <span class="accordion-title-container">
                   <span class="accordion-number"><?php print '#' . ($key+1) ?></span>
                   <?php print $node['title'] ?>
@@ -14,7 +14,7 @@
               </a>
             </h4>
           </div>
-          <div id="collapse<?php print $key + 1 ?>" class="panel-collapse collapse <?php if (($key + 1) == 1) print 'in'; ?>">
+          <div id="collapse<?php print $key + 1 ?>" class="panel-collapse collapse">
             <div class="panel-body container">
                 <?php print $node['bk_image'] ?>
                 <!--p class="eyebrow"><?php print '#' . ($key+1) . ' ' . $node['title'] ?></p-->
