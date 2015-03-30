@@ -48,7 +48,7 @@
           <div class="modal-video-description">
             <?php print $node['body'] ?>
           </div>
-          <div class="modal-video-share" data-video="NdlVaqsxHIw">
+          <div class="modal-video-share" data-video="<?php print $node['video_key'] ?>">
           </div>
         </div>
       </div>
