@@ -49,6 +49,10 @@
             <?php print $node['body'] ?>
           </div>
           <div class="modal-video-share" data-video="<?php print $node['video_key'] ?>">
+            <div class="fb-share-button" data-href="https://www.youtube.com/watch?v=<?php print $node['video_key'] ?>" data-layout="button"></div>
+
+            <a class="twitter-share-button" href="https://twitter.com/share" data-url="https://www.youtube.com/watch?v=<?php print $node['video_key'] ?>" data-count="none">Tweet</a>
+            <script type="IN/Share" data-url="https://www.youtube.com/watch?v=<?php print $node['video_key'] ?>"></script>
           </div>
         </div>
       </div>
