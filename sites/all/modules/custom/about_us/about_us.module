@@ -21,7 +21,7 @@ function about_us_block_view($delta = '') {
   switch($delta) {
     case 'about_globant':
       $statements = array();
-      $node = about_globant_get_nodequeue_content('conocenos');
+      $node = about_globant_get_nodequeue_content('about_us');
 
       foreach ($node->field_informacion_destacada[LANGUAGE_NONE] as $text) {
         $statements[] = $text['value'];

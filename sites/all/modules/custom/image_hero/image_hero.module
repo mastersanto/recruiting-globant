@@ -23,7 +23,7 @@ function image_hero_block_view($delta = '') {
     switch($delta) {
         case 'image_hero':
 
-            $nodes = image_hero_get_nodequeue_content('imagen_destacada');
+            $nodes = image_hero_get_nodequeue_content('main_image');
             $content = array();
             $node = array_pop($nodes);
 
