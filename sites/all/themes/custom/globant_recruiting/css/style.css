@@ -13049,7 +13049,7 @@ color-EC008C
   vertical-align: top;
   width: 32.9%;
 }
-.location .panel:last-child .row-3-images {
+.location .panel.layout-logos .row-3-images {
   display: none;
 }
 .offices-panel .panel-body {
@@ -13169,6 +13169,11 @@ color-EC008C
   border-radius: 0;
   box-shadow: none;
 }
+.modal-body {
+  background-color: white;
+  padding: 1em;
+  color: #777;
+}
 .modal-header {
   border: 0 none;
   padding: 0;
@@ -13204,9 +13209,6 @@ color-EC008C
   color: #666666;
   font-size: 16px;
 }
-.modal-body {
-  padding: 0;
-}
 .modal-video-description {
   line-height: 19px;
   font-size: 14px;
@@ -13214,8 +13216,8 @@ color-EC008C
 .modal-video-description p {
   background-color: white;
   display: inline;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 17px;
+  line-height: 28px;
 }
 /*
 .modal-column-left,
@@ -13369,10 +13371,14 @@ color-EC008C
 .conocenos .section-subtitle {
   margin-bottom: 25px;
 }
+.conocenos .media-youtube-video iframe {
+  height: 480px;
+  width: 854px;
+}
 .conocenos .more-globant {
   color: #a09d96;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: normal;
   line-height: 26px;
   margin: 18px auto;
   width: 60%;
@@ -13380,11 +13386,14 @@ color-EC008C
 .conocenos .more-globant a {
   color: #c1d82f;
 }
+.conocenos .social-media {
+  list-style: none;
+}
 .conocenos .social-media li {
   display: inline-block;
 }
 .conocenos .social-media li a {
-  background-image: url(/sites/all/themes/custom/globant_recruiting/assets/social-media.png);
+  background-image: url('../assets/social-media.png');
   display: block;
   height: 31px;
   overflow: hidden;
@@ -13493,6 +13502,9 @@ color-EC008C
   margin-top: 20px;
 }
 @media screen and (max-width: 991px) {
+  .page-title span {
+    font-size: 85px;
+  }
   .accordion-number {
     font-size: 30px;
   }
@@ -13510,13 +13522,16 @@ color-EC008C
     background-color: rgba(0, 0, 0, 0.1);
   }
   .studios .studio .studio-content {
+    border: 0 none;
     line-height: 120px;
     position: absolute;
   }
   .studios .studio .studio-content .thumbnail-wrapper {
     display: inline-block;
     float: left;
+    height: 120px;
     overflow: hidden;
+    position: relative;
     width: 20%;
   }
   .studios .studio .studio-content .studio-overlay {
@@ -13537,16 +13552,15 @@ color-EC008C
     font-size: 16px;
     line-height: 16px;
   }
+  .conocenos .media-youtube-video iframe {
+    height: 404px;
+    width: 720px;
+  }
 }
 @media screen and (min-width: 768px) {
   .modal-dialog,
   .modal-content {
     width: 500px;
-  }
-  .modal-body {
-    background-color: white;
-    padding: 1em;
-    color: #777;
   }
 }
 /*
@@ -13558,6 +13572,10 @@ color-EC008C
   }
   .accordion-title-link {
     font-size: 18px;
+  }
+  .conocenos .media-youtube-video iframe {
+    height: 241px;
+    width: 429px;
   }
 }
 @media screen and (max-width: 639px) {
@@ -13575,10 +13593,52 @@ color-EC008C
   }
 }
 @media screen and (max-width: 479px) {
+  .page-title {
+    line-height: 63px;
+  }
+  .page-title span {
+    font-size: 46px;
+    line-height: 32px;
+  }
+  .glb-section .section-title {
+    font-size: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+  .glb-section .section-subtitle {
+    font-size: 20px;
+    line-height: 28px;
+    width: 90%;
+  }
   .accordion-number {
     font-size: 18px;
   }
   .accordion-title-link {
     font-size: 12px;
+  }
+  .clients-panel.studios-panel .clients-list li {
+    width: 24%;
+  }
+  .studios .studio .studio-content .studio-overlay {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  #filters ul.dropdown-menu {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    left: -128px;
+    width: 300px;
+  }
+  #filter-results {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  #filter-results li {
+    float: none;
+    width: 100%;
   }
 }

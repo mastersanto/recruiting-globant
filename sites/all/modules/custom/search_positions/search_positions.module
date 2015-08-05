@@ -32,7 +32,7 @@ function search_positions_block_view($delta = '') {
             $vocabulary = taxonomy_vocabulary_machine_name_load('estudios');
             $studios = entity_load('taxonomy_term', FALSE, array('vid' => $vocabulary->vid));
             // Get available positions
-            $positions = node_load_multiple(array(), array('type' => 'posicion', 'status' => 1));
+            $positions = node_load_multiple(array(), array('type' => 'position', 'status' => 1));
             // Get multiples location for one position
             foreach ($positions as $key => $position) {
                 $location = array();

@@ -47,6 +47,7 @@ like to work and have a  professional career at Globant!') ?></p>
         <div class="modal-body">
           <?php print $node['video'] ?>
           <div class="modal-video-description">
+            <div class="thumbnail-wrapper" style="float: left; margin: 0 10px 10px 0"><?php print $node['thumb'] ?></div>
             <?php print $node['body'] ?>
           </div>
         </div>

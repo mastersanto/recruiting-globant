@@ -563,7 +563,7 @@ color-EC008C
 // Location
 //-------------------------
 .location {
-	.panel:last-child {
+	.panel.layout-logos {
 		.row-3-images {
 			display: none;
 		}		
@@ -739,6 +739,12 @@ color-EC008C
 	box-shadow: none;
 }
 
+.modal-body {
+	background-color: white;
+	padding: 1em;
+	color: #777;
+}
+
 .modal-header {
 	border: 0 none;
 	padding: 0;
@@ -779,9 +785,6 @@ color-EC008C
 	}
 }
 
-.modal-body {
-	padding: 0;
-}
 .modal-video-description {
 	line-height: 19px;
 	font-size: 14px;
@@ -789,8 +792,8 @@ color-EC008C
 	p {
 		background-color: white;
 		display: inline;;
-		font-size: 14px;
-		line-height: 14px;
+		font-size: 16px;
+    	line-height: 25px;
 	}
 }
 /*
@@ -982,62 +985,72 @@ color-EC008C
 		margin-bottom: 25px;
 	}
 
+	.media-youtube-video {
+		iframe {
+			height: 480px;
+			width: 854px;
+		}
+	}
+
 	.more-globant {
-		color: #a09d96;
+		color: @glb-gray-less;
 		font-size: 20px;
-		font-weight: 400;
+		font-weight: normal;
 		line-height: 26px;
 		margin: 18px auto;
 		width: 60%;
+
+		a {
+			color: @glb-green;
+		}
 	}
 
-	.more-globant a {
-  		color: #c1d82f;
-	}
+	.social-media {
+		list-style: none;
 
-	.social-media li {
-		display: inline-block;
-	}
+		li {
+			display: inline-block;
 
-	.social-media li a {
-		background-image: url(/sites/all/themes/custom/globant_recruiting/assets/social-media.png);
-		display: block;
-		height: 31px;
-		overflow: hidden;
-		text-indent: 100%;
-		white-space: nowrap;
-		width: 31px;
+			a {
+				background-image: url('../assets/social-media.png');
+				display: block;
+				height: 31px;
+				overflow: hidden;
+				text-indent: 100%;
+				white-space: nowrap;
+				width: 31px;
+			}
+		}
 	}
-
 	.social-facebook {
-		background-position:0 0
+		background-position: 0 0;
 	}
 	.social-twitter {
-		background-position:-31px 0
+		background-position: -31px 0;
 	}
 	.social-youtube {
-		background-position:-62px 0
+		background-position: -62px 0;
 	}
 	.social-linkedin {
-		background-position:-93px 0
-	} 
+		background-position: -93px 0;
+	}
 	.social-pinterest {
-		background-position:-124px 0
+		background-position: -124px 0;
 	}
 	.social-foursquare {
-		background-position:-155px 0
+		background-position: -155px 0;
 	}
 	.social-googleplus {
-		background-position:-186px 0
+		background-position: -186px 0;
 	}
 	.social-instagram {
-		background-position:-217px 0
+		background-position: -217px 0;
 	}
 	.social-slideshare {
-		background-position:-248px 0
+		background-position: -248px 0;
 	}
 	.social-globant {
-		background-position:-279px 0
+		background-position: -279px 0;
 	}
 
 	.carousel {
@@ -1138,6 +1151,10 @@ color-EC008C
 
 @media screen and (max-width: 991px) {
 
+	.page-title span {
+		font-size: 85px;
+	}
+
 // Collapsible
 //-------------------------
 	.accordion-number {
@@ -1164,13 +1181,16 @@ color-EC008C
 			}
 
 			.studio-content {
+				border: 0 none;
 				line-height: 120px;
 				position: absolute;
 
 				.thumbnail-wrapper {
 					display: inline-block;
 					float: left;
+					height: 120px;
 					overflow: hidden;
+					position: relative;
 					width: 20%;
 				}
 
@@ -1196,6 +1216,18 @@ color-EC008C
 			}
 		}
 	}
+
+// Conocenos
+//-------------------------
+	.conocenos {
+		.media-youtube-video {
+			iframe {
+				height: 404px;
+				width: 720px;
+			}
+		}
+	}
+
 }
 
 @media screen and (min-width: 768px) {
@@ -1205,11 +1237,6 @@ color-EC008C
 	.modal-dialog,
 	.modal-content {
 		width: 500px;
-	}
-	.modal-body {
-	  background-color: white;
-	  padding: 1em;
-	  color: #777;
 	}
 }
 /*
@@ -1226,6 +1253,18 @@ color-EC008C
 
 	.accordion-title-link {
 		font-size: 18px;
+	}
+
+// Conocenos
+//-------------------------
+	.conocenos {
+
+		.media-youtube-video {
+			iframe {
+				height: 241px;
+				width: 429px;
+			}
+		}
 	}
 }
 
@@ -1256,6 +1295,30 @@ color-EC008C
 
 @media screen and (max-width: 479px) {
 
+	.page-title {
+		line-height: 63px;
+
+		span {
+			font-size: 46px;
+			line-height: 32px;
+		}
+	}
+
+	.glb-section {
+		.section-title {
+			font-size: 32px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 90%;
+		}
+
+		.section-subtitle {
+			font-size: 20px;
+			line-height: 28px;
+			width: 90%;
+		}
+	}
+
 // Collapsible
 //-------------------------
 	.accordion-number {
@@ -1264,5 +1327,40 @@ color-EC008C
 
 	.accordion-title-link {
 		font-size: 12px;
+	}
+
+	.clients-panel.studios-panel .clients-list li {
+		width: 24%
+	}
+
+// Studios
+//-------------------------
+	.studios .studio .studio-content .studio-overlay {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+// Positions
+//-------------------------	
+	#filters {
+		ul.dropdown-menu {
+		    -webkit-columns: 2;
+		    -moz-columns: 2;
+		    columns: 2;
+		    left: -128px;
+		    width: 300px;
 		}
+	}
+
+	#filter-results {
+		list-style: none;
+		margin: 0;
+		overflow: hidden;
+		padding: 0;
+
+		li {
+			float: none;
+			width: 100%;
+		}
+	}
 }
