@@ -21,6 +21,7 @@
                   <h3 class="accordion-subtitle"><?php print $node['subtitulo'] ?></h3>
                   <?php print $node['description'][LANGUAGE_NONE][0]['safe_value'] ?>
                 </div>
+                <?php if(!empty($node['images'])): ?>
                 <div class="row-3-images">
                   <?php foreach ($node['images'] as $image) : ?>
                     <figure class="image-wrapper">
@@ -29,6 +30,7 @@
                     </figure>
                   <?php endforeach; ?>
                 </div>
+                <?php endif; ?>
                 <ul class="clients-list">
                   <?php foreach ($node['logos'] as $logo) : ?>
                     <li><?php print $logo ?></li>

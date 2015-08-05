@@ -37,6 +37,7 @@ function image_hero_block_view($delta = '') {
                 $content = array(
                     'title'         =>  $node->title,
                     'description'   =>  $node->body,
+                    'url' => !empty($node->field_url[LANGUAGE_NONE][0]['url']) ? $node->field_url[LANGUAGE_NONE][0]['url'] : '',
                     'image'         =>  $image
                 );
             }

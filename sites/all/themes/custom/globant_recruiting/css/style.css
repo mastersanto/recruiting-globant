@@ -12698,6 +12698,7 @@ color-EC008C
   max-width: 90%;
   position: relative;
   z-index: 2;
+  max-height: 200px;
 }
 .image-wrapper .image-caption {
   color: #666666;
@@ -12824,7 +12825,7 @@ color-EC008C
   background-color: #666666;
   border-bottom: 1px solid white;
   display: block;
-  font-size: 30px;
+  font-size: 21px;
   height: 60px;
   line-height: 60px;
   padding: 0 15px;
@@ -12877,7 +12878,7 @@ color-EC008C
 .accordion-number {
   color: white;
   display: inline-block;
-  font-size: 40px;
+  font-size: 33px;
   font-weight: bold;
   margin-right: 8px;
 }
@@ -12905,6 +12906,7 @@ color-EC008C
   overflow: hidden;
   position: relative;
   width: 40%;
+  text-align: justify;
 }
 /*
 .panel-column-left {
@@ -13174,6 +13176,9 @@ color-EC008C
   padding: 1em;
   color: #777;
 }
+.modal-body .thumbnail-wrapper img {
+  max-width: 200px;
+}
 .modal-header {
   border: 0 none;
   padding: 0;
@@ -13216,8 +13221,8 @@ color-EC008C
 .modal-video-description p {
   background-color: white;
   display: inline;
-  font-size: 17px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 25px;
 }
 /*
 .modal-column-left,
@@ -13235,6 +13240,7 @@ color-EC008C
   display: inline;
   font-size: 26px;
   line-height: 20px;
+  padding: 1px 14px;
   /*
 		.color-FFA340 & {
 			color: @glb-orange;
@@ -13243,6 +13249,7 @@ color-EC008C
 .modal-column-left .modal-title .video-author {
   font-size: 18px;
   font-style: italic;
+  padding-left: 10px;
 }
 .modal-column-left p {
   font-size: 12px;
@@ -13381,13 +13388,14 @@ color-EC008C
   font-weight: normal;
   line-height: 26px;
   margin: 18px auto;
-  width: 60%;
+  width: 45%;
 }
 .conocenos .more-globant a {
   color: #c1d82f;
 }
 .conocenos .social-media {
   list-style: none;
+  padding: 0;
 }
 .conocenos .social-media li {
   display: inline-block;
@@ -13506,10 +13514,10 @@ color-EC008C
     font-size: 85px;
   }
   .accordion-number {
-    font-size: 30px;
+    font-size: 25px;
   }
   .accordion-title-link {
-    font-size: 20px;
+    font-size: 15px;
   }
   .studios .studio {
     border-top: 1px solid #ddd;
@@ -13568,10 +13576,10 @@ color-EC008C
 }*/
 @media screen and (max-width: 767px) {
   .accordion-number {
-    font-size: 26px;
+    font-size: 21px;
   }
   .accordion-title-link {
-    font-size: 18px;
+    font-size: 13px;
   }
   .conocenos .media-youtube-video iframe {
     height: 241px;
